@@ -3,7 +3,14 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import BootstrapClient from '@/components/BootstrapClient'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
+import { Navigation } from 'swiper/modules';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,7 +35,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >  <Navbar />
+      >  <BootstrapClient />   
+      <Navbar />
         {children}
          <Footer />
       </body>
