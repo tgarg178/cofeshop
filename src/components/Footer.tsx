@@ -43,8 +43,7 @@ export default function Footer() {
                 <i className="bi bi-lightning-fill orangetext"></i> Electra
               </h3>
               <p className="mb-3 textmuted ">
-                Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit consectetur adipiscing elit.
+              Crafting innovative, reliable coffee machines for commercial use. We combine engineering precision with a passion for perfect coffee.
               </p>
             </div>
           </div>
@@ -54,20 +53,19 @@ export default function Footer() {
               <h4 className="text-white mb-4">Quick Links</h4>
               <Link  href="/">Home</Link>
               <Link href="/about">About us</Link>
-              <Link href="/service">Service</Link>
-              <Link href="/testimonial">Testimonial</Link>
+              <Link href="/services">Services</Link>
               <Link href="/contact">Contact Us</Link>
             </div>
           </div>
 
           <div className="col-md-6 col-lg-6 col-xl-3">
             <div className="footer-item d-flex flex-column">
-              <h4 className="text-white mb-4">Electricity service</h4>
-              <Link href="#">Air Conditioning</Link>
-              <Link href="#">Electrical Panels</Link>
-              <Link href="#">Security System</Link>
-              <Link href="#">Indoor Lighting</Link>
-              <Link href="#">Electrical Services</Link>
+              <h4 className="text-white mb-4"> Product Categories</h4>
+              <Link href="#">Automatic Coffee Machines</Link>
+              <Link href="#">Espresso Machines</Link>
+              <Link href="#">Bean-to-Cup Systems</Link>
+              <Link href="#">Commercial Brewers</Link>
+              <Link href="#">Coffee Grinder Solutions</Link>
             </div>
           </div>
 

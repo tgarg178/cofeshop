@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export default function Navbar() {
+  
   return (
        <div className="container-fluid header-top">
       <div className="container d-flex align-items-center">
@@ -56,15 +57,15 @@ export default function Navbar() {
                <span className="bi bi-list"></span>
               </button>
 
-              <div className="collapse navbar-collapse" id="navbarCollapse">
+              <div className="collapse navbar-collapse mt-md-2 mt-0" id="navbarCollapse">
                 <div className="navbar-nav mx-0 mx-lg-auto bg-white">
-                  <Link href="/" className="nav-item nav-link active">Home</Link>
-                  <Link href="/about" className="nav-item nav-link">About</Link>
-                  <Link href="/services" className="nav-item nav-link">Services</Link>
+                  <Link href="/" className="nav-item nav-link active f18">Home</Link>
+                  <Link href="/about" className="nav-item nav-link f18">About</Link>
+                  <Link href="/services" className="nav-item nav-link f18">Services</Link>
 
               
 
-                  <Link href="/contact" className="nav-item nav-link">Contact</Link>
+                  <Link href="/contact" className="nav-item nav-link f18">Contact</Link>
 
                   <div className="nav-btn ps-3">
                    
