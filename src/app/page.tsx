@@ -5,8 +5,12 @@ import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'animate.css';
+import cofee4 from '@/assets/cofee4.jpg'
+import cofee3 from '@/assets/cofee3.avif'
 
-// import { Navigation } from 'swiper/modules';
+
+
+
 
 export default function Home() {
   return (
@@ -78,8 +82,8 @@ export default function Home() {
       </Swiper>
     </div>
 
-
- <div  className="container-fluid about py-5">
+        
+ <div  className="container-fluid about py-5 d-md-block d-none">
             <div  className="container py-5">
                 <div  className="row g-5">
                     <div  className="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
@@ -114,7 +118,18 @@ export default function Home() {
                         <div  className="position-relative h-100">
                             {/* <img src="img/about-1.jpg"  className="img-fluid w-100 h-100 aboutimg1"alt=""/>
                              */}
-                            <img src="img/cofee4.jpg"  className="img-fluid w-100 h-100 aboutimg1"alt=""/>
+                            {/* <Image src="img/cofee4.jpg"  className="img-fluid w-100 h-100 aboutimg1"alt=""/> */}
+                                                      {/* <Image src={cofee4.src}  className="img-fluid w-100 h-100 aboutimg1" alt=""/> */}
+                                                      <div className="position-relative w-100" style={{ height: '400px' }}>
+  <Image
+    src={cofee4.src}
+    alt=""
+    fill
+    className="img-fluid w-100 h-100 aboutimg1"
+    sizes="100vw"
+    style={{ objectFit: 'cover' }}
+  />
+</div>
 
                             <div  className="bg-white">
                                 <div  className="position-absolute pt-3 bg-white aboutmainleft">
@@ -125,7 +140,17 @@ export default function Home() {
                                 </div>
                                 <div  className="position-absolute p-3 bg-white pb-0 pe-0 aboutmainright" >
                                     {/* <img src="img/about-2.jpg"  className="img-fluid" alt=""/> */}
-                                    <img src="img/cofee3.avif"  className="img-fluid" alt=""/>
+                                    {/* <Image src={cofee3.src}  className="img-fluid" alt=""/> */}
+                                    <div className="position-relative w-100" style={{ height: '400px' }}>
+  <Image
+    src={cofee3.src}
+    alt=""
+    fill
+    className="img-fluid w-100 h-100 aboutimg1"
+    sizes="100vw"
+    style={{ objectFit: 'cover' }}
+  />
+</div>
 
                                 </div>
                             </div>
@@ -134,6 +159,72 @@ export default function Home() {
                 </div>
             </div>
         </div>
+          <div className="container py-5 d-md-none d-block">
+      <div className="row align-items-center">
+        {/* LEFT: TEXT SECTION */}
+        <div className="col-lg-7">
+          <h2  className="display-4 mb-4 fw700black">Highest quality coffee machines</h2>
+
+          <div className="d-flex gap-4 mb-3 flex-wrap">
+            <div className="d-flex align-items-center gap-2">
+            <span  className="bi bi-cup orangetext bilight43 bi-3x me-3"></span>
+                                        <h4  className="mb-0 abouth4 pt-2">Commercial Espresso Solutions</h4>
+            </div>
+            <div className="d-flex align-items-center gap-2">
+                <span  className="bi bi-gear  orangetext bilight43 me-3"></span>
+                                        <h4  className="mb-0 abouth4 pt-2"> Fully Automatic & Customizable Machines</h4>
+            </div>
+          </div>
+
+           <p  className="mb-4 fs18">We specialize in designing and manufacturing cutting-edge coffee machines tailored for cafés, restaurants, and businesses. With precision engineering, easy-to-use interfaces, and durable materials, our machines ensure every cup of coffee meets the highest standards.
+                            </p>
+
+           <div  className="text-dark mb-4">
+                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Built for high performance and long-lasting durability</p>
+                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span>  Advanced automation for faster, consistent brewing</p>
+                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Custom design options to match your brand aesthetics</p>
+                            </div>
+          <button className="btn btn-warning text-white px-4 py-2">Contact us</button>
+        </div>
+
+        {/* RIGHT: IMAGES SECTION */}
+        <div className="col-lg-5 mt-5 mt-lg-0">
+          {/* Top full image */}
+          <div className="position-relative w-100 mb-3" style={{ height: "250px" }}>
+            <Image
+              src={cofee4.src}
+              alt="Construction site"
+              fill
+              sizes="(min-width: 1024px) 400px, 100vw"
+              style={{ objectFit: "cover" }}
+              className="rounded"
+            />
+          </div>
+
+          {/* Bottom: orange box + second image */}
+          <div className="d-flex flex-column flex-sm-row gap-3">
+            {/* Orange Box */}
+            <div className="backgoundoramge text-white p-4 d-flex flex-column justify-content-center align-items-start" style={{ minWidth: '160px' }}>
+               <h4  className="display-2 mb-0 fs700 text-black">25+</h4>
+                                        <p  className="text-white fs-5 mb-0">years of experience</p>
+            </div>
+            
+
+            {/* Bottom image */}
+            <div className="position-relative w-100" style={{ height: "200px" }}>
+              <Image
+                src={cofee3.src}
+                alt="Engineer"
+                fill
+                sizes="(min-width: 1024px) 220px, 100vw"
+                style={{ objectFit: "cover" }}
+                className="rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
  <div className="container-fluid banner py-5 wow zoomIn" data-wow-delay="0.2s">
             <div className="banner-design-1"></div>
             <div className="banner-design-2"></div>
@@ -159,7 +250,7 @@ export default function Home() {
             <div className="container py-5">
                 <div className="row g-5">
                     <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <h4 className="orangetext">Some Important FAQ's</h4>
+                        <h4 className="orangetext">Some Important FAQs</h4>
                         <h2 className="display-4 mb-4 fs700"> Common Questions About Our Coffee Machines</h2>
                         <p className="mb-4 textmuted font20faq">Get quick answers to frequently asked questions about our products, service, and support.
                         </p>

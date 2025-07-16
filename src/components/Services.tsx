@@ -1,12 +1,13 @@
 // import React from 'react'
 'use client'
 import React from 'react'
-
-import { useRef,useState, } from 'react'
+import Image from 'next/image'
+import {useState, } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import Link from 'next/link'
 
 // Step 1: Define category types
 type Category = 'Commercial' | 'Residential' | 'Industrial'
@@ -69,20 +70,15 @@ const serviceData: Record<Category, ServiceItem[]> = {
     },
   ],
   Industrial: [
-    {
-      title: 'Energy Ease Packages',
-      image: 'img/industrial-1.jpg',
-      description: 'Industrial service #1...',
+     {
+      title: 'Brite Spark Services',
+      image: '/img/commercial-2.jpg',
+      description: 'Commercial service #1 description...',
     },
     {
-      title: 'Heavy Machinery Setup',
-      image: 'img/industrial-1.jpg',
-      description: 'Industrial service #2...',
-    },
-    {
-      title: 'Automation Consulting',
-      image: 'img/industrial-1.jpg',
-      description: 'Industrial service #3...',
+      title: 'Office Energy Solutions',
+      image: '/img/commercial-2.jpg',
+      description: 'Commercial service #2 description...',
     },
     
     
@@ -93,8 +89,6 @@ const categories: Category[] = ['Commercial', 'Residential', 'Industrial']
 
 const Services = () => {
    const [activeCategory, setActiveCategory] = useState<Category>('Commercial')
-   const prevRef = useRef<HTMLButtonElement | null>(null)
-const nextRef = useRef<HTMLButtonElement | null>(null)
 
   return (
     <>
@@ -102,8 +96,8 @@ const nextRef = useRef<HTMLButtonElement | null>(null)
             <div className="container text-center py-5" >
                 <h4 className="text-white display-4 mb-4 wow  animate__animated animate__fadeInDown fs700" data-wow-delay="0.1s">Services</h4>
                 <ol className="breadcrumb d-flex justify-content-center mb-0 wow  animate__animated animate__fadeInDown" data-wow-delay="0.3s">
-                    <li className="breadcrumb-item "><a href="/" className='text-decoration-none'>Home</a></li>
-                    <li className="breadcrumb-item"><a href="#"  className='text-decoration-none'>Pages</a></li>
+                    <li className="breadcrumb-item "><Link href="/" className='text-decoration-none'>Home</Link></li>
+                    <li className="breadcrumb-item"><Link href="#"  className='text-decoration-none'>Pages</Link></li>
                     <li className="breadcrumb-item active orangetext">Services</li>
                 </ol>    
             </div>
@@ -121,10 +115,7 @@ const nextRef = useRef<HTMLButtonElement | null>(null)
             </button>
           ))}
 
-          {/* <div className="mt-4 d-flex flex-column gap-2">
-            <button className="custom-swiper-prev btn btn-light border">←</button>
-            <button className="custom-swiper-next btn btn-light border">→</button>
-          </div> */}
+      
         </div>
 
         <div className="col-md-9">
@@ -132,8 +123,8 @@ const nextRef = useRef<HTMLButtonElement | null>(null)
   spaceBetween={20}
   modules={[Autoplay]}
   autoplay={{
-    delay: 1000, // 3 seconds per slide
-    disableOnInteraction: false, // keeps autoplay even after user swipe
+    delay: 1000,
+    disableOnInteraction: false, 
   }}
   loop={true}
   breakpoints={{
@@ -146,9 +137,11 @@ const nextRef = useRef<HTMLButtonElement | null>(null)
   item?.image ? (
     <SwiperSlide key={index} >
       <div className="card h-120">
-        <img
+        <Image
           src={item.image}
           alt={item.title || 'service'}
+           width={400}
+  height={250}
           className="card-img-top"
           style={{ height: '250px', objectFit: 'cover' }}
         />

@@ -6,11 +6,8 @@ import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import BootstrapClient from '@/components/BootstrapClient'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper/modules';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
