@@ -92,16 +92,17 @@ const Services = () => {
 
   return (
     <>
-        <div className="container-fluid bg-breadcrumb">
+      <div className="container-fluid bg-breadcrumb">
             <div className="container text-center py-5" >
-                <h4 className="text-white display-4 mb-4 wow  animate__animated animate__fadeInDown fs700" data-wow-delay="0.1s">Services</h4>
+                <h4 className="text-white display-4 mb-4 wow  animate__animated animate__fadeInDown fs700" data-wow-delay="0.1s">PRODUCTS</h4>
                 <ol className="breadcrumb d-flex justify-content-center mb-0 wow  animate__animated animate__fadeInDown" data-wow-delay="0.3s">
-                    <li className="breadcrumb-item "><Link href="/" className='text-decoration-none'>Home</Link></li>
-                    <li className="breadcrumb-item"><Link href="#"  className='text-decoration-none'>Pages</Link></li>
-                    <li className="breadcrumb-item active orangetext">Services</li>
+                    <li className="breadcrumb-item "><Link href="/" className='text-decoration-none text-white'>Home</Link></li>
+                   
+                    <li className="breadcrumb-item active text-white">Products</li>
                 </ol>    
             </div>
         </div>
+
        <div className="container py-5">
       <div className="row">
         <div className="col-md-3 d-flex flex-column gap-3">
