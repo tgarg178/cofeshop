@@ -1,10 +1,10 @@
 import React from 'react'
 import 'animate.css';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 
-import newone1 from '@/assets/newone1.png'
+// import newone1 from '@/assets/newone1.png'
 
 
 
@@ -37,7 +37,7 @@ const Aboutus = () => {
 
    <h2 className='text-brown'>Trusted by Baristas, Designed for Business
 </h2>
-    <p>Whether it's for the bustling atmosphere of a café, the dynamic demands of an office, the comfort of a home, or the unique needs of a bakery or mobile van, our machines are designed to seamlessly integrate into any environment. We pride ourselves on creating equipment that is not only highly efficient and reliable but also easy to operate, empowering baristas and users to craft perfect coffee with confidence. Our commitment extends to delivering solutions that enhance productivity, elevate the coffee ritual, and stand the test of time.
+    <p>Whether it is for the bustling atmosphere of a café, the dynamic demands of an office, the comfort of a home, or the unique needs of a bakery or mobile van, our machines are designed to seamlessly integrate into any environment. We pride ourselves on creating equipment that is not only highly efficient and reliable but also easy to operate, empowering baristas and users to craft perfect coffee with confidence. Our commitment extends to delivering solutions that enhance productivity, elevate the coffee ritual, and stand the test of time.
 </p>
  <h2 className='text-brown'>Our Vision</h2>
 <p>

@@ -102,14 +102,14 @@ const Contact = () => {
       <div className="col-lg-12 col-xl-6">
         <div className="form-floating">
           <input type="text" className="form-control border-1" id="project" placeholder="Project" />
-          <label htmlFor="project">Your Project</label>
+          <label htmlFor="project">Product</label>
         </div>
       </div>
 
       <div className="col-12">
         <div className="form-floating">
           <input type="text" className="form-control border-1" id="subject" placeholder="Subject" />
-          <label htmlFor="subject">Subject</label>
+          <label htmlFor="subject">Modal</label>
         </div>
       </div>
 
@@ -157,6 +157,12 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+    
+   
+
+
+
+
   
     </section>
   )
