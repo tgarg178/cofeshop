@@ -93,6 +93,17 @@ const testimonials = [
 
 export default function Home() {
   return (
+    //  <div  className="col-lg-12 animate__animated animate__fadeInLeft ">
+
+    //              <h4  className="text-white text-uppercase fw-bold mb-4 textleft">PREMIUM COFFEE MACHINES</h4>
+    //                                 <h2  className="display-2 f72 text-white mb-4 textleft">Brew Excellence with Every Cup</h2>
+    //                                 <p  className="mb-5 fs-5 textleft text-white">Engineered for cafés, hotels, and homes — our coffee machines combine technology, taste, and timeless design to elevate your coffee experience.
+    //                                 </p>
+    //                                 <div  className="d-flex justify-content-center flex-wrap  gap-md-0  gap-3 justify-content-md-start flex-shrink-0 mb-4">
+    //                                     <Link  className="btn  py-3 px-4 px-md-5 me-2 orangetext btnmain " href="#"><i  className="bi bi-play-circle-fill orangetext"></i>  Explore Machines</Link>
+    //                                     <Link  className="btn backgoundoramge py-3 px-5 px-md-5 ms-2 me-2 text-white" href="#">Request a Quote</Link>
+    //                                      </div>
+    //             </div>
     <section>   
 
 
@@ -129,17 +140,7 @@ export default function Home() {
                 <div className="container mainleft">
                   <div className="row justify-content-start">
                     <div className="col-10 col-lg-8 paddingleft">
-                       <div  className="col-lg-12 animate__animated animate__fadeInLeft ">
-
-                 <h4  className="text-white text-uppercase fw-bold mb-4 textleft">PREMIUM COFFEE MACHINES</h4>
-                                    <h2  className="display-2 f72 text-white mb-4 textleft">Brew Excellence with Every Cup</h2>
-                                    <p  className="mb-5 fs-5 textleft text-white">Engineered for cafés, hotels, and homes — our coffee machines combine technology, taste, and timeless design to elevate your coffee experience.
-                                    </p>
-                                    <div  className="d-flex justify-content-center flex-wrap  gap-md-0  gap-3 justify-content-md-start flex-shrink-0 mb-4">
-                                        <Link  className="btn  py-3 px-4 px-md-5 me-2 orangetext btnmain " href="#"><i  className="bi bi-play-circle-fill orangetext"></i>  Explore Machines</Link>
-                                        <Link  className="btn backgoundoramge py-3 px-5 px-md-5 ms-2 me-2 text-white" href="#">Request a Quote</Link>
-                                         </div>
-                </div>
+                      
 
                  
                     </div>
@@ -164,14 +165,14 @@ export default function Home() {
                 <div className="container mainleft">
                   <div className="row justify-content-start">
                     <div className="col-10 col-lg-8 paddingleft">
-                     <div  className="col-lg-12 animate__animated animate__fadeInLeft">
+                     {/* <div  className="col-lg-12 animate__animated animate__fadeInLeft">
                 
                       <h4  className="text-white text-uppercase fw-bold mb-4 textleft">ENGINEERED TO PERFORM</h4>
                                     <h2  className="display-2 f72 text-white mb-4 textleft">     Built to Brew. Designed to Last.</h2>
                                     <p  className="mb-5 fs-5 textleft text-white">Discover our range of reliable, high-performance coffee machines trusted by leading cafés, restaurants, and hotels across the globe.
                                     </p>
                                   
-                </div>
+                </div> */}
                      
                     </div>
                   </div>
