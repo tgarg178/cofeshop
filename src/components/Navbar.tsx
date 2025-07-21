@@ -4,12 +4,13 @@ export default function Navbar() {
   
   return (
    
-     <div className="container-fluid header-top">
+     <div className="container-fluid header-top" >
+      {/* style={{backgroundColor:"#0e121d;"}} */}
       <div className="container d-flex align-items-center">
         <div className="d-flex align-items-center h-100 ">
           <Link href="/" className="navbar-brand" style={{ height: '125px' }}>
             <h1 className="   orangetext mb-0">
-              <i className="bi bi-lightning-fill orangetext"></i> Cofee
+              <i className="bi bi-lightning-fill orangetext"></i> Quality Industries
             </h1>
           </Link>
         </div>
@@ -50,7 +51,7 @@ export default function Navbar() {
             <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
               <Link href="/" className="navbar-brand-2">
                 <h1 className=" orangetext mb-0">
-           <i className="bi bi-lightning-fill orangetext"></i>Electra
+           <i className="bi bi-lightning-fill orangetext"></i>Quality Industries
                 </h1>
               </Link>
 
@@ -58,10 +59,12 @@ export default function Navbar() {
                <span className="bi bi-list"></span>
               </button>
 
-              <div className="collapse navbar-collapse mt-md-2 mt-0" id="navbarCollapse">
-                <div className="navbar-nav mx-0 mx-lg-auto bg-white">
+              <div className="collapse navbar-collapse mt-md-2 mt-0" id="navbarCollapse" >
+                <div className="navbar-nav mx-0 mx-lg-auto bg-white" >
                   <Link href="/" className="nav-item nav-link active f18">Home</Link>
                   <Link href="/about" className="nav-item nav-link f18">About</Link>
+                  <Link href="/process" className="nav-item nav-link f18">Process</Link>
+
                   <Link href="/product" className="nav-item nav-link f18">Products</Link>
 
               

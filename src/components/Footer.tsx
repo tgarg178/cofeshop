@@ -28,10 +28,10 @@ export default function Footer() {
         </div>
 
         <div className="row g-5">
-          <div className="col-md-6 col-lg-6 col-xl-3">
+          <div className="col-md-6 col-lg-6 col-xl-4">
             <div className="footer-item d-flex flex-column">
               <h3 className="text-white mb-4">
-                <i className="bi bi-lightning-fill orangetext"></i> Cofee
+                <i className="bi bi-lightning-fill orangetext"></i>Quality Industries
               </h3>
               <p className="mb-3 textmuted ">
               Crafting innovative, reliable coffee machines for commercial use. We combine engineering precision with a passion for perfect coffee.
@@ -39,17 +39,19 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-md-6 col-lg-6 col-xl-3">
-            <div className="footer-item d-flex flex-column">
+          <div className="col-md-6 col-lg-6 col-xl-4">
+            <div className="footer-item d-flex flex-column px-md-5">
               <h4 className="text-white mb-4">Quick Links</h4>
               <Link  href="/">Home</Link>
               <Link href="/about">About us</Link>
+              <Link href="/process">Process</Link>
+
               <Link href="/product">Products</Link>
               <Link href="/contact">Contact Us</Link>
             </div>
           </div>
 
-          <div className="col-md-6 col-lg-6 col-xl-3">
+          {/* <div className="col-md-6 col-lg-6 col-xl-3">
             <div className="footer-item d-flex flex-column">
               <h4 className="text-white mb-4"> Product Categories</h4>
               <Link href="/product">Automatic Coffee Machines</Link>
@@ -58,26 +60,24 @@ export default function Footer() {
               <Link href="/product">Grinders</Link>
               <Link href="/product">Coffee Brewers</Link>
             </div>
-          </div>
+          </div> */}
 
-          <div className="col-md-6 col-lg-6 col-xl-3">
+          <div className="col-md-6 col-lg-6 col-xl-4">
             <div className="footer-item d-flex flex-column">
               <h4 className="text-white mb-4">Contact Info</h4>
               <Link href="#">
-               <i className="bi bi-geo-alt-fill orangetext"></i> 123 Street, New York, USA
+               <i className="bi bi-geo-alt-fill orangetext"></i> Sy.No: 810, Plot No. 19-B/11, Phase-II, IDA Patancheru, Medak Dist. 502319, Telangana.
+              </Link>
+               <Link href="#">
+               <i className="bi bi-geo-alt-fill orangetext"></i> Flat No. 192, Maneesh Enclave, 2nd Floor, Bhagyanagar Phase-3, Near MNR College Kukatpally, Hyderabad - 500090.
               </Link>
               <Link href="mailto:info@example.com">
-                <i className="bi bi-envelope-fill  me-2 orangetext"></i> info@example.com
-              </Link>
-              <Link href="mailto:info@example.com">
-                <i className="bi bi-envelope-fill me-2 orangetext"></i> info@example.com
+                <i className="bi bi-envelope-fill me-2 orangetext"></i> qualityindustries123@gmail.com
               </Link>
               <Link href="tel:+01234567890">
-                <i className="bi bi-telephone-fill orangetext"></i> +012 345 67890
+                <i className="bi bi-telephone-fill orangetext"></i> +91 9100090879
               </Link>
-              <Link href="tel:+01234567890" className="mb-3">
-              <i className="bi bi-telephone-fill orangetext"></i> +012 345 67890
-              </Link>
+              
             </div>
           </div>
         </div>

@@ -1,132 +1,21 @@
-// import React from 'react'
 'use client'
 import React from 'react'
 import Image from 'next/image'
-// import {useState, } from 'react'
-// import { Swiper, SwiperSlide } from 'swiper/react'
-// import { Autoplay } from 'swiper/modules'
+
 import 'swiper/css'
 import 'swiper/css/navigation'
 import Link from 'next/link'
-import p1 from '@/assets/p1n.png';
-import p2 from '@/assets/pn2.png'
-import p3 from '@/assets/pn3.png'
-import p4 from '@/assets/pn4.png'
-import p5 from '@/assets/p5.png'
-import p6 from '@/assets/p6.png'
-import p7 from '@/assets/p7.png'
-import p8 from '@/assets/pn8.png'
+
+
+
+import cofeebaneer from '@/assets/imagenew.png';
 
 
 
 
 
-
-const products = [
-  {
-    title: 'Automatic Coffee Machines',
-    description:
-      'For coffee professionals, automatic coffee machines redefine effortless excellence. With one-touch operation and programmable settings, they deliver consistently perfect brews. They ensure your seamless experience with dedicated maintenance, consultation, and service support for every cup brewed to perfection.',
-    image: p1,
-  },
-  {
-    title: 'Semi-Automatic Coffee Machines',
-    description:
-      'Semi-automatic coffee machines provide automation and artistry. These machines showcase their expertise by supporting baristas to control the brewing, grinding, and tamping processes. They are especially suited for specialty cafés that aim to create flavourful.',
-    image: p2,
-  },
-  {
-    title: 'Blenders',
-    description:
-      'Creating exceptional coffee experiences involves more than just brewing. Our high-quality blenders add precision and elegance to your creations, transforming them into true works of art. They are designed to enhance your craft and ensure that every sip delights your customers.',
-    image: p3,
-  },
-  {
-    title: 'Grinders',
-    description:
-      'The perfect cup of coffee starts with the ideal grind. Coffee grinders extract your beans’ authentic flavours and aromas, ensuring every cup is rich and full-bodied. Whether you’re an experienced barista or a coffee professional, using a high-quality grinder accentuates your coffee .',
-    image:p4,
-  },
-  {
-    title: 'Coffee Brewers',
-    description:
-      'Whether you cater to low or high-volume coffee needs, our brewers provide versatility and consistency. Designed to meet your café’s demands, they ensure every brew is flavourful, efficient, and reliable, delivering the coffee your customers love every time.',
-    image: p5,
-  },
-  {
-    title: 'Roasters',
-    description:
-      'Coffee roasting is a blend of science and artistry. It involves carefully transforming raw beans into the aromatic and flavourful treasures we enjoy. By mastering variables such as time, temperature, and airflow, roasters can create the ideal foundation for exceptional brews.',
-    image: p6,
-  },
-   {
-    title: 'Innovation and Technology',
-    description:
-      'Upscale your coffee offerings with innovative technology that captivates customers. From enhancing visual appeal to creating customised experiences, our high-end solutions empower cafés to deliver memorable moments and stay ahead in India’s evolving coffee culture.',
-    image: p7,
-  },
-   {
-    title: 'Espresso Accessories',
-    description:
-      'CBarista tools improve efficiency, consistency, and presentation in cafés. From tampers that ensure perfect extraction to pitchers that create silky micro-foam, these tools enhance the overall quality of coffee. Instruments for latte art add a creative touch, while practical accessories like knock boxes streamline the workflow.',
-    image: p8,
-  },
-];
-
-// type Category = 'Commercial' | 'Residential' | 'Industrial'
-
-// type ServiceItem = {
-//   title: string
-//   image: string
-//   description: string
-// }
-
-
-// const serviceData: Record<Category, ServiceItem[]> = {
-//   Commercial: [
-//     {
-//       title: 'Brite Spark Services',
-//       image: '/img/commercial-2.jpg',
-//       description: 'Commercial service #1 description...',
-//     },
-//     {
-//       title: 'Office Energy Solutions',
-//       image: '/img/commercial-2.jpg',
-//       description: 'Commercial service #2 description...',
-//     },
-//   ],
-//   Residential: [
-//     {
-//       title: 'Home Solar Solutions',
-//       image: '/img/residential-1.jpg',
-//       description: 'Residential service #1...',
-//     },
-//     {
-//       title: 'Smart Meter Installations',
-//       image: '/img/residential-1.jpg',
-//       description: 'Residential service #2...',
-//     },
-//   ],
-//   Industrial: [
-//      {
-//       title: 'Brite Spark Services',
-//       image: '/img/commercial-2.jpg',
-//       description: 'Commercial service #1 description...',
-//     },
-//     {
-//       title: 'Office Energy Solutions',
-//       image: '/img/commercial-2.jpg',
-//       description: 'Commercial service #2 description...',
-//     },
-    
-    
-//   ],
-// }
-
-// const categories: Category[] = ['Commercial', 'Residential', 'Industrial']
 
 const Services = () => {
-  //  const [activeCategory, setActiveCategory] = useState<Category>('Commercial')
 
   return (
     <>
@@ -143,90 +32,161 @@ const Services = () => {
 
 
 
-<div className="max95 d-flex justify-content-center">
-  <div className=" py-5 w-100">
-    <div className="row gap-3 justify-content-center">
-      {products.map((product, idx) => (
-        <div className="col-md-5 mb-4" key={idx}>
-          <div className="p-4 shadow-sm border rounded h-100 row">
-            <div className="text-center mb-3 col-md-6">
-              <Image
-                src={product.image}
-                alt={product.title}
-                width={250}
-                height={250}
-                objectFit="contain"
-              />
+{/* <h1 className='text-uppercase   orangetext max90'> coffee</h1> */}
+     {/* <div className="carousel-container position-relative mx-5 row mt-5 mb-5">
+  
+
+            <div style={{ position: 'relative', height: '100%' }} className='col-md-5'>
+            <Image
+  src={cofeebaneer}
+  alt="Slide 1"
+  width={1200}    
+  height={400}    
+  style={{ maxWidth: '100%', height: '100%' }}
+/>
+
+
+
+
+            
             </div>
-            <div className="col-md-6">
-              <h5 className="fw-bold">{product.title}</h5>
-              <p className="text-muted">{product.description}</p>
-             
-                 <a  className="btn btnmain2 py-3 px-4 px-md-5 ms-2 text-white" href="#">Buy Now</a>
+</div> */}
+      
+
+      {/* <section className="bg-dark text-white py-5">
+      <div className="container">
+        <h2 className="text-center fw-bold mb-4 text-uppercase">Our Product</h2>
+
+        <div className="row align-items-center mb-5">
+          <div className="col-md-6 mb-4 mb-md-0">
+            <div className="img-container border rounded overflow-hidden">
+              <Image src={cofeebaneer} alt="Coffee Processing Systems" className="img-fluid w-100" />
             </div>
           </div>
+
+          <div className="col-md-6">
+            <h4 className="fw-bold mb-3 text-warning">Complete Coffee Plant Solutions</h4>
+            <p>
+              We specialize in building end-to-end, fully automated coffee processing plants tailored to your needs.
+              Our systems are designed to maximize flavor, consistency, and operational efficiency, while adhering to international food safety standards.
+            </p>
+
+            <ul className="list-unstyled">
+              <li>✅ <strong>Green Coffee Handling:</strong> Systems for intake, cleaning, storage & weighing</li>
+              <li>✅ <strong>Extraction Units:</strong> Optimized for aroma retention and high yield</li>
+              <li>✅ <strong>Evaporation Systems:</strong> Concentrate coffee efficiently with minimal energy loss</li>
+              <li>✅ <strong>Spray Drying & Freeze Drying:</strong> Delivering high-quality instant and soluble coffee</li>
+              <li>✅ <strong>Automated Control Panels:</strong> PLC/SCADA-based systems for precision control</li>
+              <li>✅ <strong>Custom Plant Design:</strong> Built to meet your production scale and footprint</li>
+            </ul>
+          </div>
         </div>
-      ))}
-    </div>
+
+        
+<div className="row">
+  <div className="col-md-6 mb-4">
+    <h5 className="text-warning fw-bold mb-3">Modular and Scalable Systems</h5>
+    <p>
+      Our coffee processing systems are modular — built to scale with your business. Start with a base configuration
+      and expand production without disrupting existing operations. Ideal for both new startups and large enterprises.
+    </p>
+
+    <h5 className="text-warning fw-bold mt-4 mb-3">Tailored to Every Roast & Blend</h5>
+    <p>
+      Whether you're processing Arabica, Robusta, or specialty blends, our systems are fully configurable to match your roast profile,
+      flavor goals, and packaging requirements — ensuring brand consistency across batches.
+    </p>
+  </div>
+
+  <div className="col-md-6 mb-4">
+    <h5 className="text-warning fw-bold mb-3">Certified Quality Assurance</h5>
+    <p>
+      Every component in our system is designed and manufactured under strict international standards (ISO, CE, and FDA where required).
+      We implement thorough quality checks at each stage of production and assembly.
+    </p>
+
+    <h5 className="text-warning fw-bold mt-4 mb-3">Sustainability-Driven Engineering</h5>
+    <p>
+      From water reuse systems to energy recovery and low-emission designs, our coffee plants are built to reduce environmental impact
+      and help you meet sustainability targets without compromising performance.
+    </p>
   </div>
 </div>
-       {/* <div className="container py-5">
-      <div className="row">
-        <div className="col-md-3 d-flex flex-column gap-3">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`btn  py-3   ${activeCategory === cat ? 'btn-warning text-white' : 'btn-outline-warning'} fw-semibold`}
-            >
-              {cat}
-            </button>
-          ))}
-
-      
-        </div>
-
-        <div className="col-md-9">
-     <Swiper
-  spaceBetween={20}
-  modules={[Autoplay]}
-  autoplay={{
-    delay: 1000,
-    disableOnInteraction: false, 
-  }}
-  loop={true}
-  breakpoints={{
-    0: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1200: { slidesPerView: 2 },
-  }}
->
-           {serviceData[activeCategory]?.map((item, index) => (
-  item?.image ? (
-    <SwiperSlide key={index} >
-      <div className="card h-120">
-        <Image
-          src={item.image}
-          alt={item.title || 'service'}
-           width={400}
-  height={250}
-          className="card-img-top"
-          style={{ height: '250px', objectFit: 'cover' }}
-        />
-        <div className="card-body d-flex flex-column">
-          <h5 className="card-title">{item.title}</h5>
-          <p className="card-text text-muted">{item.description}</p>
-          <button className="btn btn-warning mt-auto">Read More</button>
-        </div>
+<div className="text-center mt-4">
+  <button className="btn btn-warning text-dark fw-semibold px-4 py-3">
+    Enquire About Our Solutions
+  </button>
+</div>
       </div>
-    </SwiperSlide>
-  ) : null
-))}
+    </section> */}
 
-          </Swiper>
+
+          <section className=" text-white py-5">
+      <div className="container">
+        <h2 className="text-center fw-bold mb-4 text-uppercase text-black ">Our Product</h2>
+
+        <div className="row align-items-center mb-5">
+          <div className="col-md-6 mb-4 mb-md-0">
+            <div className="img-container border rounded overflow-hidden">
+              <Image src={cofeebaneer} alt="Coffee Processing Systems" className="img-fluid w-100" />
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <h4 className="fw-bold mb-3 orangetext">Complete Coffee Plant Solutions</h4>
+            <p className='text-black'>
+              We specialize in building end-to-end, fully automated coffee processing plants tailored to your needs.
+              Our systems are designed to maximize flavor, consistency, and operational efficiency, while adhering to international food safety standards.
+            </p>
+
+            <ul className="list-unstyled">
+              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Green Coffee Handling:</strong> Systems for intake, cleaning, storage & weighing</li>
+              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Extraction Units:</strong> Optimized for aroma retention and high yield</li>
+              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Evaporation Systems:</strong> Concentrate coffee efficiently with minimal energy loss</li>
+              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Spray Drying & Freeze Drying:</strong> Delivering high-quality instant and soluble coffee</li>
+              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Automated Control Panels:</strong> PLC/SCADA-based systems for precision control</li>
+              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Custom Plant Design:</strong> Built to meet your production scale and footprint</li>
+            </ul>
+          </div>
         </div>
+
+        
+<div className="row">
+  <div className="col-md-6 mb-4">
+    <h5 className="orangetext fw-bold mb-3">Modular and Scalable Systems</h5>
+    <p className='text-black'>
+      Our coffee processing systems are modular — built to scale with your business. Start with a base configuration
+      and expand production without disrupting existing operations. Ideal for both new startups and large enterprises.
+    </p>
+
+    <h5 className="orangetext fw-bold mt-4 mb-3">Tailored to Every Roast & Blend</h5>
+    <p className='text-black'>
+      Whether you are processing Arabica, Robusta, or specialty blends, our systems are fully configurable to match your roast profile,
+      flavor goals, and packaging requirements — ensuring brand consistency across batches.
+    </p>
+  </div>
+
+  <div className="col-md-6 mb-4">
+    <h5 className="orangetext fw-bold mb-3">Certified Quality Assurance</h5>
+    <p className='text-black'>
+      Every component in our system is designed and manufactured under strict international standards (ISO, CE, and FDA where required).
+      We implement thorough quality checks at each stage of production and assembly.
+    </p>
+
+    <h5 className="orangetext fw-bold mt-4 mb-3">Sustainability-Driven Engineering</h5>
+    <p className='text-black'>
+      From water reuse systems to energy recovery and low-emission designs, our coffee plants are built to reduce environmental impact
+      and help you meet sustainability targets without compromising performance.
+    </p>
+  </div>
+</div>
+<div className="text-center mt-4">
+  <button className="btn backgoundoramge text-white fw-semibold px-4 py-3">
+    Enquire About Our Solutions
+  </button>
+</div>
       </div>
-    </div> */}
+    </section>
     </>
   )
 }
