@@ -140,7 +140,18 @@ const handleSubmit = async (
             <div  className="container py-md-5 py-0">
                 <div  className="row g-5">
                  
+    <div className="position-relative  overflow-hidden d-md-none d-block max90">
+      <Image
+        src={bannermain}
+        alt="DEVEX Anlagenbau"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover"
+        priority
+      />
 
+      
+    </div>
 
     <div  className="col-lg-7 animate__animated animate__fadeInLeft ">
 
@@ -180,18 +191,7 @@ const handleSubmit = async (
 
 
 
-                            <div className="position-relative  overflow-hidden d-md-none d-block max90">
-      <Image
-        src={bannermain}
-        alt="DEVEX Anlagenbau"
-        width={1920}
-        height={800}
-        className="img-fluid w-100 object-fit-cover"
-        priority
-      />
-
-      
-    </div>
+                        
                     </div>
                 </div>
             </div>
@@ -273,7 +273,7 @@ const handleSubmit = async (
 
                     <div  className="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
                         <div  className="h-100">
-                            <h2  className="fs41 mb-4 fw700black ">Highest quality coffee machines</h2>
+                            <h2  className="fs41 mb-4 fw700black ">Highest quality coffee Plants</h2>
                             <div  className="row g-4 mb-4">
                                 <div  className="col-md-6">
                                     <div   className="d-flex text-decoration-none">
@@ -343,7 +343,7 @@ const handleSubmit = async (
           </div>
         </div>
         <div className="col-lg-7">
-          <h2  className="display-4 mb-4 fw700black text-primary">Highest quality coffee machines</h2>
+          <h2  className="display-4 mb-4 fw700black text-primary">Highest quality coffee Plants</h2>
 
           <div className="d-flex gap-4 mb-3 flex-wrap">
             <div className="d-flex align-items-center gap-2">
