@@ -81,7 +81,7 @@ const handleSubmit = async (
                             <h1 className="mb-4 fs700" >Let&rsquo;s Brew Success Together – Get in Touch</h1>
                             <p className="mb-3">Whether you&rsquo;re looking to install a new coffee machine, customize one for your café, or explore distribution opportunities — we’re here to help. Fill out the form and our team will get back to you shortly.
                             </p>
-                            <div className="d-flex align-items-center mb-4">
+                            {/* <div className="d-flex align-items-center mb-4">
                               <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
                 <i className="bi bi-facebook"></i>
               </a>
@@ -94,7 +94,7 @@ const handleSubmit = async (
               <a className="btn btn-light btn-md-square me-0 orangetext btnhover2new" href="#">
                 <i className="bi bi-linkedin"></i>
               </a>
-                            </div>
+                            </div> */}
                             <div className="row g-4">
                                 <div className="col-12">
                                     <div className="d-inline-flex bg-white w-100 p-4">
@@ -143,7 +143,7 @@ const handleSubmit = async (
 
                   >
 
-                    <Form className='mt-5 pt-4'>
+                    <Form className='mt-2 pt-4'>
                       <div className="row g-3">
                         <div className="col-md-6">
                           <div className="form-floating">

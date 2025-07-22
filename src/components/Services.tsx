@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 import Link from 'next/link'
 
 
+import GlobalEnquiryForm from '@/components/GlobalPopupEnquiry';
 
 import cofeebaneer from '@/assets/imagenew.png';
 
@@ -181,9 +182,13 @@ const Services = () => {
   </div>
 </div>
 <div className="text-center mt-4">
-  <button className="btn skybluebackgound text-white fw-semibold px-4 py-3">
+  {/* <button className="btn skybluebackgound text-white fw-semibold px-4 py-3">
     Enquire About Our Solutions
-  </button>
+  </button> */}
+
+     <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Enquire About Our Solutions"
+          />
+
 </div>
       </div>
     </section>

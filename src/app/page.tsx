@@ -27,6 +27,11 @@ import cofemanu1 from'@/assets/cofemanu2.jpg';
 import cofee4 from '@/assets/cofee4.jpg'
 import cofee3 from '@/assets/cofee3.avif'
 
+import cofeepalnt1 from '@/assets/cofeplant4.jpg'
+import cofeepalnt2 from '@/assets/cofeplant3.jpg'
+
+
+
 import bannermain from '@/assets/imagenew.png'
 // import cofedesign from '@/assets/cofeedesign.png'
 import { toast } from 'react-hot-toast';
@@ -132,7 +137,7 @@ const handleSubmit = async (
 
      
  <div  className="container-fluid about py-5 ">
-            <div  className="container py-5">
+            <div  className="container py-md-5 py-0">
                 <div  className="row g-5">
                  
 
@@ -157,7 +162,7 @@ const handleSubmit = async (
 
 
                     <div  className="col-lg-5 wow fadeInRight mxheightset340  animate__animated animate__fadeInRight" data-wow-delay="0.2s">
-                        <div  className="position-relative h-100">
+                        <div  className="position-relative h-100 d-md-block d-none">
                           
                                                       <div className="position-relative w-100" style={{ height: '500px' }}>
   <Image
@@ -172,11 +177,52 @@ const handleSubmit = async (
 
                          
                         </div>
+
+
+
+                            <div className="position-relative  overflow-hidden d-md-none d-block max90">
+      <Image
+        src={bannermain}
+        alt="DEVEX Anlagenbau"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover"
+        priority
+      />
+
+      
+    </div>
                     </div>
                 </div>
             </div>
         </div>
 
+    <div className="position-relative max90 d-md-block d-none">
+      <Image
+        src={cofeepalnt1}
+        alt="DEVEX Anlagenbau"
+        width={1920}
+        height={600}
+        className=" w-100 "
+        priority
+      />
+
+    
+    </div>
+
+
+     <div className="position-relative w-100 overflow-hidden d-md-none d-block">
+      <Image
+        src={cofeepalnt1}
+        alt="DEVEX Anlagenbau"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover"
+        priority
+      />
+
+      
+    </div>
    
  <div  className="container-fluid about py-5 d-md-block d-none">
             <div  className="container py-5">
@@ -220,6 +266,11 @@ const handleSubmit = async (
                             </div>
                         </div>
                     </div>
+
+
+
+
+
                     <div  className="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
                         <div  className="h-100">
                             <h2  className="fs41 mb-4 fw700black ">Highest quality coffee machines</h2>
@@ -258,7 +309,7 @@ const handleSubmit = async (
                 </div>
             </div>
         </div>
-          <div className="container py-5 d-md-none d-block">
+          <div className="container py-md-5 py-0 d-md-none d-block">
       <div className="row align-items-center">
            <div className="col-lg-5 mt-5 mt-lg-0">
           <div className="position-relative w-100 mb-3" style={{ height: "250px" }}>
@@ -356,6 +407,33 @@ const handleSubmit = async (
       </div>
     </section>
   
+
+       <div className="position-relative max90 mt-5 d-md-block d-none">
+      <Image
+        src={cofeepalnt2}
+        alt="DEVEX Anlagenbau"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover"
+        priority
+      />
+
+      
+    </div>
+
+
+     <div className="position-relative w-100 overflow-hidden d-md-none d-block mt-5">
+      <Image
+        src={cofeepalnt2}
+        alt="DEVEX Anlagenbau"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover"
+        priority
+      />
+
+      
+    </div>
 
        <section className="container my-5">
       <h2 className="text-center mb-4 pb-4 h2size  ">Testimonials</h2>
