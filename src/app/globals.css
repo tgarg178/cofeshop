@@ -544,3 +544,8 @@ color: #0D6EFD !important;
   border-radius: 10px;
   min-height: 430px;
 }
+
+.overlayText {
+  z-index: 10;
+  max-width: 100%;
+}

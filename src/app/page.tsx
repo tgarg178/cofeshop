@@ -24,15 +24,22 @@ import test6 from '@/assets/test6.webp';
 import cofemanu1 from'@/assets/cofemanu2.jpg';
 // import banner1 from '@/assets/coffebanner.jpg'
 // import banner2 from '@/assets/cofeebanner2.jpg'
-import cofee4 from '@/assets/cofee4.jpg'
+// import cofee4 from '@/assets/cofee4.jpg'
 import cofee3 from '@/assets/cofee3.avif'
 
-import cofeepalnt1 from '@/assets/cofeplant4.jpg'
+// import cofeepalnt1 from '@/assets/cofeplant4.jpg'
 import cofeepalnt2 from '@/assets/cofeplant3.jpg'
 
 
 
-import bannermain from '@/assets/imagenew.png'
+// import bannermain from '@/assets/imagenew.png'
+import main1 from '@/assets/main1.jpeg'
+import modi2 from '@/assets/modi5.jpeg'
+import modi3 from '@/assets/modi1.jpeg'
+
+
+
+
 // import cofedesign from '@/assets/cofeedesign.png'
 import { toast } from 'react-hot-toast';
 
@@ -136,13 +143,15 @@ const handleSubmit = async (
 
 
      
- <div  className="container-fluid about py-5 ">
+ <div  className="container-fluid about py-md-5 py-2 ">
             <div  className="container py-md-5 py-0">
                 <div  className="row g-5">
                  
     <div className="position-relative  overflow-hidden d-md-none d-block max90">
       <Image
-        src={bannermain}
+        // src={bannermain}
+        src={main1}
+
         alt="DEVEX Anlagenbau"
         width={1920}
         height={800}
@@ -177,7 +186,7 @@ const handleSubmit = async (
                           
                                                       <div className="position-relative w-100" style={{ height: '500px' }}>
   <Image
-    src={bannermain}
+    src={main1}
     alt=""
     fill
     className="img-fluid w-100 h-100 aboutimg1 rounded"
@@ -199,7 +208,7 @@ const handleSubmit = async (
 
     <div className="position-relative max90 d-md-block d-none">
       <Image
-        src={cofeepalnt1}
+        src={modi2}
         alt="DEVEX Anlagenbau"
         width={1920}
         height={600}
@@ -207,20 +216,32 @@ const handleSubmit = async (
         priority
       />
 
-    
+       <div className="position-absolute top-50 start-50 translate-middle text-center overlayText">
+        <h2 className="text-primary bg-white bg-opacity-75 px-4 py-2 d-inline-block fw-semibold">
+      
+          <GlobalEnquiryForm className="  rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 text-decoration-none " buttonText="   Looking to Set Up or Upgrade Your Coffee Processing Plant? "
+          />
+        </h2>
+      </div>
     </div>
 
 
      <div className="position-relative w-100 overflow-hidden d-md-none d-block">
       <Image
-        src={cofeepalnt1}
+        src={modi2}
         alt="DEVEX Anlagenbau"
         width={1920}
         height={800}
         className="img-fluid w-100 object-fit-cover"
         priority
       />
-
+   <div className="position-absolute top-50 start-50 translate-middle text-center ${styles.overlayText">
+        <h2 className="text-primary bg-white bg-opacity-75 px-4 py-2 d-inline-block fw-semibold">
+      
+          <GlobalEnquiryForm className="  rounded-0 pymainatin py-3  text-decoration-none " buttonText="   Looking to Set Up or Upgrade Your Coffee Processing Plant? "
+          />
+        </h2>
+      </div>
       
     </div>
    
@@ -232,13 +253,14 @@ const handleSubmit = async (
                           
                                                       <div className="position-relative w-100" style={{ height: '400px' }}>
   <Image
-    src={cofee4.src}
+    src={modi3}
     alt=""
     fill
     className="img-fluid w-100 h-100 aboutimg1"
     sizes="100vw"
     style={{ objectFit: 'cover' }}
   />
+  
 </div>
 
                             <div  className="bg-white">
@@ -311,10 +333,40 @@ const handleSubmit = async (
         </div>
           <div className="container py-md-5 py-0 d-md-none d-block">
       <div className="row align-items-center">
-           <div className="col-lg-5 mt-5 mt-lg-0">
+          
+        <div className="col-lg-7 mt-3">
+          <h2  className="display-4 mb-4 fw700black ">Highest quality coffee Plants</h2>
+
+          <div className="d-flex gap-4 mb-3 flex-wrap">
+            <div className="d-flex align-items-center gap-2">
+            <span  className="bi bi-cup  text-primary bilight43 bi-3x me-3"></span>
+                                        <h4  className="mb-0 abouth4 pt-2">Commercial Espresso Solutions</h4>
+            </div>
+            <div className="d-flex align-items-center gap-2">
+                <span  className="bi bi-gear   text-primary bilight43 me-3"></span>
+                                        <h4  className="mb-0 abouth4 pt-2"> Fully Automatic & Customizable Machines</h4>
+            </div>
+          </div>
+
+           <p  className="mb-4 fs18">With over 25 years of experience in engineering Leveraging advanced automation, hygienic design, and customizable features, we ensure each system delivers a premium coffee experience while aligning with your brand and operational goals.
+                            </p>
+
+           <div  className="text-dark mb-4">
+                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Engineered for performance, longevity, and low maintenance</p>
+                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span>  Smart automation for seamless, high-volume brewing
+
+</p>
+                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Custom-built options tailored to your brand identity and space</p>
+                                 <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Manufactured to meet international safety and quality standards</p>
+                            </div>
+       <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2  mb-4" buttonText="Contact us"
+          />
+        </div>
+
+      <div className="col-lg-5 mt-5 mt-lg-0">
           <div className="position-relative w-100 mb-3" style={{ height: "250px" }}>
             <Image
-              src={cofee4.src}
+              src={modi3}
               alt="Construction site"
               fill
               sizes="(min-width: 1024px) 400px, 100vw"
@@ -342,43 +394,13 @@ const handleSubmit = async (
             </div>
           </div>
         </div>
-        <div className="col-lg-7">
-          <h2  className="display-4 mb-4 fw700black text-primary">Highest quality coffee Plants</h2>
-
-          <div className="d-flex gap-4 mb-3 flex-wrap">
-            <div className="d-flex align-items-center gap-2">
-            <span  className="bi bi-cup  text-primary bilight43 bi-3x me-3"></span>
-                                        <h4  className="mb-0 abouth4 pt-2">Commercial Espresso Solutions</h4>
-            </div>
-            <div className="d-flex align-items-center gap-2">
-                <span  className="bi bi-gear   text-primary bilight43 me-3"></span>
-                                        <h4  className="mb-0 abouth4 pt-2"> Fully Automatic & Customizable Machines</h4>
-            </div>
-          </div>
-
-           <p  className="mb-4 fs18">With over 25 years of experience in engineering Leveraging advanced automation, hygienic design, and customizable features, we ensure each system delivers a premium coffee experience while aligning with your brand and operational goals.
-                            </p>
-
-           <div  className="text-dark mb-4">
-                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Engineered for performance, longevity, and low maintenance</p>
-                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span>  Smart automation for seamless, high-volume brewing
-
-</p>
-                                <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Custom-built options tailored to your brand identity and space</p>
-                                 <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Manufactured to meet international safety and quality standards</p>
-                            </div>
-       <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Contact us"
-          />
-        </div>
-
-     
       </div>
     </div>
 
 
 
        
- <section className="container-fluid px-0  backgounimgsky  pt-5  pb-5">
+ <section className="container-fluid px-0  backgounimgsky  pt-5  pb-5 mt-md-0 mt-5">
   {/* backgoundnew */}
       <div className="row g-0  align-items-center  max90 ">
         <div className="col-lg-8   p-md-5 p-3">
