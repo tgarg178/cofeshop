@@ -8,6 +8,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    
     // Dynamically import Collapse only on client
     import('bootstrap/js/dist/collapse').then(({ default: Collapse }) => {
       const collapseEl = document.getElementById('navbarNavDropdown');

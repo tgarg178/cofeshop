@@ -73,7 +73,7 @@ const GlobalPopupEnquiry: FC<Props> = ({ className, title, pagename, buttonText,
 
 
             <MyVerticallyCenteredModal
-                title={title ? title : 'Let’s build a better future for you'}
+                title={title ? title : 'Looking to Build or Upgrade a Coffee Plant?'}
                 pagename={pagename ? pagename : 'no'}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
