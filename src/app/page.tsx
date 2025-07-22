@@ -32,6 +32,7 @@ import bannermain from '@/assets/imagenew.png'
 import { toast } from 'react-hot-toast';
 
 import { ErrorMessage, Field, Form, Formik } from 'formik';
+// import { FormikHelpers } from 'formik';
 import emailjs from 'emailjs-com';
 
 // import Link from 'next/link'
@@ -78,22 +79,52 @@ const testimonials = [
 
 export default function Home() {
   
-  const handleSubmit = async (values: any, { resetForm }: any) => {
-    try {
-      toast.loading('Processing');
-      await emailjs.send("service_01ispk6", "template_tuey7rr", values, "FEguMM7ZerdBCdRrs");
+  // const handleSubmit = async (values: any, { resetForm }: any) => {
+  //   try {
+  //     toast.loading('Processing');
+  //     await emailjs.send("service_01ispk6", "template_tuey7rr", values, "FEguMM7ZerdBCdRrs");
 
-      toast.dismiss();
-      toast.success('Thank you. We will get back to you.');
-      resetForm();
+  //     toast.dismiss();
+  //     toast.success('Thank you. We will get back to you.');
+  //     resetForm();
 
 
-      // }
-    } catch (error) {
-      toast.error('try again later!');
-      console.error('Error submitting form:', error);
-    }
-  };
+  //     // }
+  //   } catch (error) {
+  //     toast.error('try again later!');
+  //     console.error('Error submitting form:', error);
+  //   }
+  // };
+type EnquiryFormValues = {
+  name: string;
+  email: string;
+  contact_number: string;
+  course: string;
+  location: string;
+  message: string;
+};
+const handleSubmit = async (
+  values: EnquiryFormValues,
+  { resetForm }: { resetForm: () => void }
+) => {
+  try {
+    toast.loading('Processing');
+    
+    await emailjs.send(
+      'service_01ispk6',
+      'template_tuey7rr',
+      values as Record<string, string>,
+      'FEguMM7ZerdBCdRrs'
+    );
+
+    toast.dismiss();
+    toast.success('Thank you. We will get back to you.');
+    resetForm();
+  } catch (error) {
+    toast.error('Try again later!');
+    console.error('Error submitting form:', error);
+  }
+};
   return (
  
     <section >   

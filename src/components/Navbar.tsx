@@ -2,18 +2,21 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import Collapse from 'bootstrap/js/dist/collapse';
 import GlobalEnquiryForm from '@/components/GlobalPopupEnquiry';
 
 export default function Navbar() {
   const pathname = usePathname();
-useEffect(() => {
-  const collapseEl = document.getElementById('navbarNavDropdown');
-  if (collapseEl?.classList.contains('show')) {
-    const bsCollapse = Collapse.getInstance(collapseEl) || new Collapse(collapseEl);
-    bsCollapse.hide();
-  }
-}, [pathname]);
+
+  useEffect(() => {
+    // Dynamically import Collapse only on client
+    import('bootstrap/js/dist/collapse').then(({ default: Collapse }) => {
+      const collapseEl = document.getElementById('navbarNavDropdown');
+      if (collapseEl?.classList.contains('show')) {
+        const bsCollapse = Collapse.getInstance(collapseEl) || new Collapse(collapseEl);
+        bsCollapse.hide();
+      }
+    });
+  }, [pathname]);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-white borderbottom py-3 px-3 px-lg-5 max90 mt-md-4">
