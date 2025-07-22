@@ -9,8 +9,8 @@ import Link from 'next/link'
 
 import GlobalEnquiryForm from '@/components/GlobalPopupEnquiry';
 
-import cofeebaneer from '@/assets/imagenew.png';
 
+import cofeebaneer from "@/assets/process1.png";
 
 
 

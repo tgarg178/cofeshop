@@ -20,7 +20,7 @@ export default function Navbar() {
   }, [pathname]);
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-white borderbottom py-3 px-3 px-lg-5 max90 mt-md-4">
+      <nav className="navbar navbar-expand-lg bg-white borderbottom py-3 px-3 px-lg-5 max90 mt-md-4 ">
         <div className="container-fluid">
           <Link href="/" className="navbar-brand d-flex align-items-center">
             <span className="fw-bold text-primary f35">Quality Industries</span>

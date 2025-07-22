@@ -549,3 +549,11 @@ color: #0D6EFD !important;
   z-index: 10;
   max-width: 100%;
 }
+.borderbottom{
+  border-bottom:1px solid #0D6EFD;
+} 
+.custom-width {
+  min-width: 80%;   /* Adjust as needed: try 60%, 70%, 80%, etc. */
+  max-width: 90%;   /* Optional */
+  width: fit-content; /* Keeps it from being 100% if content is smaller */
+}

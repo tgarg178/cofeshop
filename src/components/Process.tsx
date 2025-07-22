@@ -8,7 +8,6 @@ import thermalImg from '@/assets/evaporation.jpg'
 import testcenterImg from '@/assets/etxtcenter.jpg'
 import Link from 'next/link';
 import 'animate.css';
-import modi2 from '@/assets/process1.png'
 
 
 const Process = () => {
@@ -67,31 +66,7 @@ const Process = () => {
       </div>
 
 
-       <div className="position-relative max90 d-md-block d-none mb-5 ">
-      <Image
-        src={modi2}
-        alt="DEVEX Anlagenbau"
-        width={1920}
-        height={600}
-        className=" w-100  h-70"
-        priority
-      />
-
-    </div>
-
-
-     <div className="position-relative w-100 overflow-hidden d-md-none d-block">
-      <Image
-        src={modi2}
-        alt="DEVEX Anlagenbau"
-        width={1920}
-        height={800}
-        className="img-fluid w-100 object-fit-cover"
-        priority
-      />
-  
-      
-    </div>
+    
 
       <div className="row gy-5  mt-3">
         {processData.map((step, index) => (
