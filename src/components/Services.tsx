@@ -133,19 +133,19 @@ const Services = () => {
           </div>
 
           <div className="col-md-6">
-            <h4 className="fw-bold mb-3 orangetext">Complete Coffee Plant Solutions</h4>
+            <h4 className="fw-bold mb-3 text-black">Complete Coffee Plant Solutions</h4>
             <p className='text-black'>
               We specialize in building end-to-end, fully automated coffee processing plants tailored to your needs.
               Our systems are designed to maximize flavor, consistency, and operational efficiency, while adhering to international food safety standards.
             </p>
 
             <ul className="list-unstyled">
-              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Green Coffee Handling:</strong> Systems for intake, cleaning, storage & weighing</li>
-              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Extraction Units:</strong> Optimized for aroma retention and high yield</li>
-              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Evaporation Systems:</strong> Concentrate coffee efficiently with minimal energy loss</li>
-              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Spray Drying & Freeze Drying:</strong> Delivering high-quality instant and soluble coffee</li>
-              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Automated Control Panels:</strong> PLC/SCADA-based systems for precision control</li>
-              <li className='text-black'><span  className="bi bi-check-lg orangetext me-2"></span> <strong>Custom Plant Design:</strong> Built to meet your production scale and footprint</li>
+              <li className='text-black'><span  className="bi bi-check-lg text-black me-2"></span> <strong>Green Coffee Handling:</strong> Systems for intake, cleaning, storage & weighing</li>
+              <li className='text-black'><span  className="bi bi-check-lg text-black  me-2"></span> <strong>Extraction Units:</strong> Optimized for aroma retention and high yield</li>
+              <li className='text-black'><span  className="bi bi-check-lg text-black me-2"></span> <strong>Evaporation Systems:</strong> Concentrate coffee efficiently with minimal energy loss</li>
+              <li className='text-black'><span  className="bi bi-check-lg text-black me-2"></span> <strong>Spray Drying & Freeze Drying:</strong> Delivering high-quality instant and soluble coffee</li>
+              <li className='text-black'><span  className="bi bi-check-lg text-black me-2"></span> <strong>Automated Control Panels:</strong> PLC/SCADA-based systems for precision control</li>
+              <li className='text-black'><span  className="bi bi-check-lg text-black me-2"></span> <strong>Custom Plant Design:</strong> Built to meet your production scale and footprint</li>
             </ul>
           </div>
         </div>
@@ -153,13 +153,13 @@ const Services = () => {
         
 <div className="row">
   <div className="col-md-6 mb-4">
-    <h5 className="orangetext fw-bold mb-3">Modular and Scalable Systems</h5>
+    <h5 className="text-black fw-bold mb-3">Modular and Scalable Systems</h5>
     <p className='text-black'>
       Our coffee processing systems are modular — built to scale with your business. Start with a base configuration
       and expand production without disrupting existing operations. Ideal for both new startups and large enterprises.
     </p>
 
-    <h5 className="orangetext fw-bold mt-4 mb-3">Tailored to Every Roast & Blend</h5>
+    <h5 className="text-black fw-bold mt-4 mb-3">Tailored to Every Roast & Blend</h5>
     <p className='text-black'>
       Whether you are processing Arabica, Robusta, or specialty blends, our systems are fully configurable to match your roast profile,
       flavor goals, and packaging requirements — ensuring brand consistency across batches.
@@ -167,13 +167,13 @@ const Services = () => {
   </div>
 
   <div className="col-md-6 mb-4">
-    <h5 className="orangetext fw-bold mb-3">Certified Quality Assurance</h5>
+    <h5 className="text-black  fw-bold mb-3">Certified Quality Assurance</h5>
     <p className='text-black'>
       Every component in our system is designed and manufactured under strict international standards (ISO, CE, and FDA where required).
       We implement thorough quality checks at each stage of production and assembly.
     </p>
 
-    <h5 className="orangetext fw-bold mt-4 mb-3">Sustainability-Driven Engineering</h5>
+    <h5 className="text-black fw-bold mt-4 mb-3">Sustainability-Driven Engineering</h5>
     <p className='text-black'>
       From water reuse systems to energy recovery and low-emission designs, our coffee plants are built to reduce environmental impact
       and help you meet sustainability targets without compromising performance.
@@ -181,7 +181,7 @@ const Services = () => {
   </div>
 </div>
 <div className="text-center mt-4">
-  <button className="btn backgoundoramge text-white fw-semibold px-4 py-3">
+  <button className="btn skybluebackgound text-white fw-semibold px-4 py-3">
     Enquire About Our Solutions
   </button>
 </div>

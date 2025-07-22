@@ -8,7 +8,6 @@
 }
 
 
-/*** Button Start ***/
 .btn {
     font-weight: 600;
     transition: .5s;
@@ -72,7 +71,7 @@
 }
 
 /*** Navbar Start ***/
-.header-top .topbar .dropdown-toggle::after {
+/* .header-top .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -380,7 +379,7 @@
 }
 .backgoundoramge{
   background-color: rgb(246, 138, 10) !important;
-}
+} */
 /*** Navbar End ***/
 
 
@@ -566,7 +565,7 @@
     z-index: 99;
 }
 
-.banner::after {
+/* .banner::after {
     content: "";
     position: absolute;
     width: 100px;
@@ -588,7 +587,7 @@
     background: rgb(246, 138, 10);
     transform: rotate(45deg);
     z-index: 1;
-}
+} */
 
 .banner .banner-design-1 {
     position: absolute;
@@ -844,6 +843,12 @@ height: 340px !important;
   max-width: 90% !important;
   margin:  0 auto;
 }
+.max70{
+         max-width: 70% !important;
+  margin:  0 auto;
+      
+}
+
 @media only screen and (max-width:600px)
 {
 .max90 {
@@ -851,13 +856,14 @@ height: 340px !important;
   margin:  0 auto;
   justify-content: center;
 }
+.max70{
+    max-width:85% !important;
+  margin:  0 auto;
+}
+
 }
 .backgoundnew{
   background-color: #0e121d;
-}
-.max70{
-    max-width: 70% !important;
-  margin:  0 auto;
 }
 
 .parafamily{
@@ -870,4 +876,93 @@ height: 340px !important;
 }
 .fs41{
     font-size: 41px !important;
+}
+
+.f21{
+    font-size: 21px !important;
+    font-weight: 500 !important;
+}
+.f35
+{
+    font-size: 35px !important;
+    font-weight: 700 !important;
+}
+.orangetext {
+    color: rgb(246, 138, 10) !important;
+}
+.textmuted
+{
+      color: #6c757d !important;
+      text-decoration: none !important;
+}
+.backgoundoramge{
+  background-color: rgb(246, 138, 10) !important;
+} 
+
+@media only screen and (max-width:600px)  and (min-width:350px)
+{
+    .f35
+{
+    font-size: 26px !important;
+    font-weight: 700 !important;
+}
+}
+@media only screen and (max-width:350px)  
+{
+    .f35
+{
+    font-size: 22px !important;
+    font-weight: 700 !important;
+}
+}
+.skybluebackgound{
+    border-color: #0D6EFD !important ;
+    background-color:#0D6EFD!important;
+    color: white !important;
+}
+
+.skybluebackgound:hover{
+    border-color: #0D6EFD !important ;
+    background-color: white !important;
+    color: #0D6EFD !important;
+}
+
+
+.backgounimgsky{
+     background-color: #0D6EFD !important;
+} 
+
+.footernew {
+      background-color: #0D6EFD !important;
+}
+
+.copyrightnew {
+    border-top: 1px solid #fff;
+  background-color: #0D6EFD !important;
+
+}
+
+
+.btnhover2new {
+
+
+    background-color: #0D6EFD !important;
+   color :white !important;
+}
+.btnhover2new:hover {
+
+
+   color: #0D6EFD !important;
+    background-color:white !important;
+}
+.btnhover2 {
+color: #0D6EFD !important;
+    background-color:white !important;
+}
+
+.searchForm {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  min-height: 430px;
 }

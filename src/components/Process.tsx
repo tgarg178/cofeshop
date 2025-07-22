@@ -80,7 +80,7 @@ const Process = () => {
                 />
               </div>
            <div  className="mb-3 col-lg-6  col-12  text-center animate__animated animate__fadeInRight">
-              <h2 className='orangetext'>{step.title}</h2>
+              <h2 className='text-primary'>{step.title}</h2>
                {/* <h5 className="fw-bold px-3 ">{step.title}</h5> */}
               <p className="text-black px-3 parafamily">{step.desc}</p>
             </div>

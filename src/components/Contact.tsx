@@ -1,7 +1,29 @@
+'use client';
 import React from 'react'
 import Link from 'next/link'
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { toast } from 'react-hot-toast';
+
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
+    const handleSubmit = async (values: any, { resetForm }: any) => {
+    try {
+      toast.loading('Processing');
+      await emailjs.send("service_01ispk6", "template_tuey7rr", values, "FEguMM7ZerdBCdRrs");
+
+      toast.dismiss();
+      toast.success('Thank you. We will get back to you.');
+      resetForm();
+
+
+      // }
+    } catch (error) {
+      toast.error('try again later!');
+      console.error('Error submitting form:', error);
+    }
+  };
   return (
    <>
       <div className="container-fluid bg-breadcrumb">
@@ -23,28 +45,28 @@ const Contact = () => {
                 <div className="row g-5">
                     <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div>
-                            <h4 className="orangetext">Contact Us</h4>
+                            <h4 className="text-primary">Contact Us</h4>
                             <h1 className="mb-4 fs700" >Let&rsquo;s Brew Success Together – Get in Touch</h1>
                             <p className="mb-3">Whether you&rsquo;re looking to install a new coffee machine, customize one for your café, or explore distribution opportunities — we’re here to help. Fill out the form and our team will get back to you shortly.
                             </p>
                             <div className="d-flex align-items-center mb-4">
-                              <a className="btn btn-light btn-md-square me-3 orangetext btnhovernew" href="#">
+                              <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
                 <i className="bi bi-facebook"></i>
               </a>
-              <a className="btn btn-light btn-md-square me-3 orangetext btnhovernew" href="#">
+              <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
                 <i className="bi bi-twitter"></i>
               </a>
-              <a className="btn btn-light btn-md-square me-3 orangetext btnhovernew" href="#">
+              <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
                 <i className="bi bi-instagram"></i>
               </a>
-              <a className="btn btn-light btn-md-square me-0 orangetext btnhovernew" href="#">
+              <a className="btn btn-light btn-md-square me-0 orangetext btnhover2new" href="#">
                 <i className="bi bi-linkedin"></i>
               </a>
                             </div>
                             <div className="row g-4">
                                 <div className="col-12">
                                     <div className="d-inline-flex bg-white w-100 p-4">
-                                        <i className=" me-4 bi bi-geo-alt-fill orangetext iconfontsize"></i>
+                                        <i className=" me-4 bi bi-geo-alt-fill text-primary iconfontsize"></i>
                                         <div>
                                             <h4>Address</h4>
                                             <p className="mb-0">123 North tower New York, USA</p>
@@ -53,7 +75,7 @@ const Contact = () => {
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="d-inline-flex bg-white w-100 p-4 gap-4">
-                                        <i className="bi bi-envelope-fill me-2 orangetext iconfontsize"></i>
+                                        <i className="bi bi-envelope-fill me-2  text-primary iconfontsize"></i>
                                         <div>
                                             <h4>Mail Us</h4>
                                             <p className="mb-0">info@example.com</p>
@@ -62,7 +84,7 @@ const Contact = () => {
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="d-inline-flex bg-white w-100 p-4 gap-4">
-                                        <i className="bi bi-telephone-fill orangetext iconfontsize"></i>
+                                        <i className="bi bi-telephone-fill  text-primary iconfontsize"></i>
                                         <div>
                                             <h4>Telephone</h4>
                                             <p className="mb-0">(+012) 3456 7890 123</p>
@@ -75,70 +97,75 @@ const Contact = () => {
                     <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
                         <div>
                         
-                            <form>
-                                
-                                   <div className="row g-4   mt-md-4 mt-0">
-      <div className="col-lg-12 col-xl-6">
-        <div className="form-floating">
-          <input type="text" className="form-control border-0" id="name" placeholder="Your Name" />
-          <label htmlFor="name">Your Name</label>
-        </div>
-      </div>
+                                <Formik 
+                    initialValues={{
+                      name: '',
+                      email: '',
+                      contact_number: '',
+                      course: '',
+                      location: '',
+                      message: '',
+                    }}
+                    // validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
 
-      <div className="col-lg-12 col-xl-6">
-        <div className="form-floating">
-          <input type="email" className="form-control border-0" id="email" placeholder="Your Email" />
-          <label htmlFor="email">Your Email</label>
-        </div>
-      </div>
+                  >
 
-      <div className="col-lg-12 col-xl-6">
-        <div className="form-floating">
-          <input type="tel" className="form-control border-0" id="phone" placeholder="Phone" />
-          <label htmlFor="phone">Your Phone</label>
-        </div>
-      </div>
+                    <Form className='mt-5 pt-4'>
+                      <div className="row g-3">
+                        <div className="col-md-6">
+                          <div className="form-floating">
+                            <Field type="text" name="name" placeholder="Enter Name" className="form-control" required />
+                            <label htmlFor="name">Your Name</label>
+                            <ErrorMessage name="name" component="div" className="error text-danger" />
+                          </div>
+                        </div>
 
-      <div className="col-lg-12 col-xl-6">
-        <div className="form-floating">
-          <input type="text" className="form-control border-0" id="project" placeholder="Project" />
-          <label htmlFor="project">Your Project</label>
-        </div>
-      </div>
+                        <div className="col-md-6">
+                          <div className="form-floating">
+                            <Field type="email" name="email" placeholder="Enter Email" className="form-control" required />
+                            <label htmlFor="email">Your Email</label>
+                            <ErrorMessage name="email" component="div" className="error text-danger" />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-floating">
+                            <Field type="text" name="contact_number" placeholder="Enter Contact Number" className="form-control" required />
+                            <label htmlFor="email">Your Contact Number</label>
+                            <ErrorMessage name="contact_number" component="div" className="error text-danger" />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-floating">
+                            <Field type="text" name="course" placeholder="Enter Course" className="form-control" />
+                            <label htmlFor="course">Course/Role</label>
+                            <ErrorMessage name="course" component="div" className="error text-danger" />
 
-      <div className="col-12">
-        <div className="form-floating">
-          <input type="text" className="form-control border-0" id="subject" placeholder="Subject" />
-          <label htmlFor="subject">Subject</label>
-        </div>
-      </div>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-floating">
+                            <Field type="text" name="location" placeholder="Enter Location" className="form-control" />
+                            <label htmlFor="location">location</label>
+                            <ErrorMessage name="location" component="div" className="error text-danger" />
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="form-floating">
+                            <Field as="textarea" name="message" placeholder="Enter Message" style={{ height: '150px' }} className="form-control" />
+                            <label htmlFor="message">Message</label>
+                            <ErrorMessage name="message" component="div" className="error text-danger" />
+                          </div>
+                        </div>
+                        <div className="d-grid">
+                          <button type="submit" className="btn btn-primary w-100 py-3">
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </Form>
 
-      <div className="col-12">
-        <div className="form-floating">
-          <textarea
-            className="form-control border-0"
-            placeholder="Leave a message here"
-            id="message"
-            style={{ height: '125px' }}
-          ></textarea>
-          <label htmlFor="message">Message</label>
-        </div>
-      </div>
-
-      <div className="col-12">
-        <div className="form-check">
-          <input className="form-check-input" type="checkbox" value="" id="flexCheck" />
-          <label className="form-check-label" htmlFor="flexCheck">
-            I agree with the site privacy policy
-          </label>
-        </div>
-      </div>
-
-      <div className="col-12">
-        <button className="btn btnmain2 w-100 py-3 text-white ">Send Message</button>
-      </div>
-    </div>
-                            </form>
+                  </Formik>
                         </div>
                     </div>
                     <div className="col-12 wow fadeInUp" data-wow-delay="0.2s">

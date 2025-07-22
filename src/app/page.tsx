@@ -6,7 +6,7 @@ import { Autoplay, Pagination,  } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'animate.css';
-
+import GlobalEnquiryForm from '@/components/GlobalPopupEnquiry';
 
 // import cof1 from '@/assets/cof1.png'
 // import cof2 from '@/assets/cof2.png'
@@ -29,30 +29,13 @@ import cofee3 from '@/assets/cofee3.avif'
 
 import bannermain from '@/assets/imagenew.png'
 // import cofedesign from '@/assets/cofeedesign.png'
+import { toast } from 'react-hot-toast';
 
-import Link from 'next/link'
-// const categories = [
-//   {
-//     title: 'Coffee Machine For Cafe',
-//     image: cof1,  
-//     link: '/product',
-//   },
-//   {
-//     title: 'Coffee Machine For Office',
-//     image: cof2,
-//     link: '/product',
-//   },
-//   {
-//     title: 'Coffee Machine For Home',
-//     image: cof3,
-//     link: '/product',
-//   },
-//   {
-//     title: 'Coffee Machine for Bakery and Van',
-//     image: cof4,
-//     link: '/product',
-//   },
-// ]
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import emailjs from 'emailjs-com';
+
+// import Link from 'next/link'
+
 const testimonials = [
  {
   name: 'Estella Castillo',
@@ -94,13 +77,30 @@ const testimonials = [
 ]
 
 export default function Home() {
+  
+  const handleSubmit = async (values: any, { resetForm }: any) => {
+    try {
+      toast.loading('Processing');
+      await emailjs.send("service_01ispk6", "template_tuey7rr", values, "FEguMM7ZerdBCdRrs");
+
+      toast.dismiss();
+      toast.success('Thank you. We will get back to you.');
+      resetForm();
+
+
+      // }
+    } catch (error) {
+      toast.error('try again later!');
+      console.error('Error submitting form:', error);
+    }
+  };
   return (
  
     <section >   
 
 
      
- <div  className="container-fluid about py-5 d-md-block d-none">
+ <div  className="container-fluid about py-5 ">
             <div  className="container py-5">
                 <div  className="row g-5">
                  
@@ -108,7 +108,7 @@ export default function Home() {
 
     <div  className="col-lg-7 animate__animated animate__fadeInLeft ">
 
-                                    <h2  className="display-2 f72  mb-4 textleft">Empowering Coffee Processing Excellence</h2>
+                                    <h2  className="display-2 f72  mb-4 textleft text-primary ">Empowering Coffee Processing Excellence</h2>
                  <h4  className=" text-uppercase fw-bold mb-4 textleft">From Bean to Brew, We Deliver Complete Coffee Plant Solutions</h4>
 
                                     <p  className="mb-5 fs-5 textleft ">As a leading name in coffee process engineering, we provide turnkey systems that are technologically advanced, hygienic, and energy-efficient. Whether it’s extraction, evaporation, or spray drying, our solutions preserve coffee’s natural richness while optimizing every stage of production.
@@ -116,7 +116,11 @@ export default function Home() {
                                      
                                     <div  className="d-flex justify-content-center flex-wrap  gap-md-0  gap-3 justify-content-md-start flex-shrink-0 mb-4">
                                        
-                                        <Link  className="btn backgoundoramge py-3 px-5 px-md-5 ms-2 me-2 text-white" href="#">Request a Quote</Link>
+                                        {/* <Link  className="btn skybluebackgound py-3 px-5 px-md-5 ms-2 me-2 text-white" href="#">Request a Quote</Link> */}
+                                        {/* backgoundoramge */}
+
+                                           <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Request a Quote"
+          />
                                          </div>
                 </div>
 
@@ -161,9 +165,10 @@ export default function Home() {
 </div>
 
                             <div  className="bg-white">
-                                <div  className="position-absolute pt-3 bg-white aboutmainleft">
-                                    <div  className="backgoundoramge p-4">
-                                        <h4  className="display-2 mb-0 fs700">25+</h4>
+                                <div  className="position-absolute pt-3 bg-white aboutmainleft ">
+                                    <div  className="backgounimgsky p-4">
+                                      {/* backgoundoramge */}
+                                        <h4  className="display-2 mb-0 fs700 text-white">25+</h4>
                                         <p  className="text-white fs-5 mb-0">years of experience</p>
                                     </div>
                                 </div>
@@ -186,17 +191,17 @@ export default function Home() {
                     </div>
                     <div  className="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
                         <div  className="h-100">
-                            <h2  className="fs41 mb-4 fw700black">Highest quality coffee machines</h2>
+                            <h2  className="fs41 mb-4 fw700black ">Highest quality coffee machines</h2>
                             <div  className="row g-4 mb-4">
                                 <div  className="col-md-6">
                                     <div   className="d-flex text-decoration-none">
-                                        <span  className="bi bi-cup orangetext bilight43 bi-3x me-3"></span>
+                                        <span  className="bi bi-cup text-primary bilight43 bi-3x me-3"></span>
                                         <h4  className="mb-0 abouth4 pt-2">Commercial Espresso Solutions</h4>
                                     </div>
                                 </div>
                                 <div  className="col-md-6">
                                     <div  className="d-flex text-decoration-none">
-                                        <span  className="bi bi-gear  orangetext bilight43 me-3"></span>
+                                        <span  className="bi bi-gear  text-primary bilight43 me-3"></span>
                                         <h4  className="mb-0 abouth4 pt-2"> Fully Automatic & Customizable Machines</h4>
                                     </div>
                                 </div>
@@ -211,8 +216,12 @@ export default function Home() {
                                 <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Custom-built options tailored to your brand identity and space</p>
                                  <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Manufactured to meet international safety and quality standards</p>
                             </div>
-                            <a  className="btn btnmain2 py-3 px-4 px-md-5 ms-2 text-white" href="#">Contact us</a>
+                            {/* <a  className="btn  py-3 px-4 skybluebackgound px-md-5 ms-2 text-white" href="#">Contact us</a> */}
+
+                               <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Contact us"
+          />
                         </div>
+                        {/* btnmain2 */}
                     </div>
                  
                 </div>
@@ -233,9 +242,8 @@ export default function Home() {
           </div>
 
           <div className="d-flex flex-column flex-sm-row gap-3">
-            {/* Orange Box */}
-            <div className="backgoundoramge text-white p-4 d-flex flex-column justify-content-center align-items-start" style={{ minWidth: '160px' }}>
-               <h4  className="display-2 mb-0 fs700 text-black">25+</h4>
+            <div className="backgounimgsky text-white p-4 d-flex flex-column justify-content-center align-items-start" style={{ minWidth: '160px' }}>
+               <h4  className="display-2 mb-0 fs700 text-white">25+</h4>
                                         <p  className="text-white fs-5 mb-0">years of experience</p>
             </div>
             
@@ -253,15 +261,15 @@ export default function Home() {
           </div>
         </div>
         <div className="col-lg-7">
-          <h2  className="display-4 mb-4 fw700black">Highest quality coffee machines</h2>
+          <h2  className="display-4 mb-4 fw700black text-primary">Highest quality coffee machines</h2>
 
           <div className="d-flex gap-4 mb-3 flex-wrap">
             <div className="d-flex align-items-center gap-2">
-            <span  className="bi bi-cup orangetext bilight43 bi-3x me-3"></span>
+            <span  className="bi bi-cup  text-primary bilight43 bi-3x me-3"></span>
                                         <h4  className="mb-0 abouth4 pt-2">Commercial Espresso Solutions</h4>
             </div>
             <div className="d-flex align-items-center gap-2">
-                <span  className="bi bi-gear  orangetext bilight43 me-3"></span>
+                <span  className="bi bi-gear   text-primary bilight43 me-3"></span>
                                         <h4  className="mb-0 abouth4 pt-2"> Fully Automatic & Customizable Machines</h4>
             </div>
           </div>
@@ -277,7 +285,8 @@ export default function Home() {
                                 <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Custom-built options tailored to your brand identity and space</p>
                                  <p  className="fs-5"><span  className="bi bi-check-lg orangetext me-2"></span> Manufactured to meet international safety and quality standards</p>
                             </div>
-          <button className="btn btn-warning text-white px-4 py-2">Contact us</button>
+       <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Contact us"
+          />
         </div>
 
      
@@ -286,43 +295,14 @@ export default function Home() {
 
 
 
-          {/* <section className="container my-5">
-      <div className=" mb-4 borderbottom  pb-4 text-center" >
-        <h2 className="cofheading h2size">Brew Better, Anywhere – The Right<br />Coffee Machine for Every Space</h2>
-      </div> 
-
-      <div className="row g-4">
-        {categories.map((item, idx) => (
-          <div className="col-12 col-sm-6 col-lg-3" key={idx}>
-            <div className="card h-100 border-0">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={500}
-                height={450}
-                className="card-img-top rounded zoom-hover"
-                style={{ objectFit: 'cover', height: '250px' }}
-              />
-              <div className="card-body px-0">
-                <Link href={item.link} className="text-decoration-none text-dark d-flex justify-content-between align-items-center">
-                  <span className="fw-bold text-brown" style={{ textDecoration: 'underline' }}>{item.title}</span>
-                  <span className="fs-5 text-brown">&#8599;</span> 
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section> */}
- <section className="container-fluid px-0 backgoundnew   pt-5  pb-5">
+       
+ <section className="container-fluid px-0  backgounimgsky  pt-5  pb-5">
+  {/* backgoundnew */}
       <div className="row g-0  align-items-center  max90 ">
-        {/* Left: Text */}
         <div className="col-lg-8   p-md-5 p-3">
         
-          <h1 className="text-white    h2size animate__animated animate__fadeInLeft">
+          <h1 className="  text-white h2size animate__animated animate__fadeInLeft">
   Engineered for Performance,  <br />Built for Scale <br />
-  {/* Commercial-Grade Coffee Machines <br />
-  Trusted by Baristas, Designed for Business */}
 
 </h1>
   <h4 className="mt-4 text-white animate__animated animate__fadeInLeft">
@@ -347,7 +327,7 @@ export default function Home() {
   
 
        <section className="container my-5">
-      <h2 className="text-center mb-4 pb-4 h2size ">Testimonials</h2>
+      <h2 className="text-center mb-4 pb-4 h2size  ">Testimonials</h2>
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -385,8 +365,8 @@ export default function Home() {
 
 
      <div className="container-fluid banner py-5 wow zoomIn mb-5  " data-wow-delay="0.2s">
-            <div className="banner-design-1"></div>
-            <div className="banner-design-2"></div>
+            {/* <div className="banner-design-1"></div> */}
+            {/* <div className="banner-design-2"></div> */}
             <div className="container py-5">
                 <div className="row g-5">
                     <div className="col-lg-8">
@@ -397,12 +377,76 @@ export default function Home() {
                     </div>
                     <div className="col-lg-4">
                         <div className="d-flex align-items-center justify-content-lg-end h-100">
-                            <a className="btn btnconatct py-3 px-4 px-md-5 ms-2 text-white fw-5" href="#">Request a Custom Demo</a>
+                            {/* <a className="btn backgounimgsky py-3 px-4 px-md-5 ms-2 text-white fw-5" href="#">Request a Custom Demo</a> */}
+                             <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Request a Custom Demo"
+          />
                         </div>
                     </div>
                 </div>
             </div>
          </div>
+
+
+
+
+
+
+
+
+
+              <div className="modal fade" id="enquiryModal" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <Formik
+                initialValues={{
+                  name: '',
+                  email: '',
+                  contact_number: '',
+                  course: '',
+                  location: '',
+                  message: '',
+                }}
+                // validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+              >
+                <div className="searchForm">
+                  <h5 className="pb-3 fw-bold text-center text-blue">Let’s build a better future for you</h5>
+                  <Form>
+                    <div className="mb-3">
+                      <Field type="text" name="name" placeholder="Enter Name" className="form-control" required />
+                      <ErrorMessage name="name" component="div" className="error text-danger" />
+                    </div>
+                    <div className="mb-3">
+                      <Field type="email" name="email" placeholder="Enter Email" className="form-control" required />
+                      <ErrorMessage name="email" component="div" className="error text-danger" />
+                    </div>
+                    <div className="mb-3">
+                      <Field type="text" name="contact_number" placeholder="Enter Contact Number" className="form-control" required />
+                      <ErrorMessage name="contact_number" component="div" className="error text-danger" />
+                    </div>
+                    <div className="mb-3">
+                      <Field type="text" name="course" placeholder="Enter Course" className="form-control" />
+                      <ErrorMessage name="course" component="div" className="error text-danger" />
+                    </div>
+                    <div className="mb-3">
+                      <Field type="text" name="location" placeholder="Enter Location" className="form-control" />
+                      <ErrorMessage name="location" component="div" className="error text-danger" />
+                    </div>
+                    <div className="mb-3">
+                      <Field as="textarea" name="message" placeholder="Enter Message" className="form-control" />
+                      <ErrorMessage name="message" component="div" className="error text-danger" />
+                    </div>
+                    <div className="d-grid">
+                      <button type="submit" className="btn btn-success">
+                        Submit
+                      </button>
+                    </div>
+                  </Form>
+                </div>
+              </Formik>
+            </div>
+          </div>
+        </div>
     </section >
   );
 }
