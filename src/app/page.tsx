@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination ,} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,9 +30,17 @@ import cofee3 from "@/assets/process1.png";
 import cofeepalnt2 from "@/assets/cofeplant3.jpg";
 
 // import bannermain from '@/assets/imagenew.png'
-import main1 from "@/assets/main1.jpeg";
+// import main1 from "@/assets/main1.jpeg";
 import modi2 from "@/assets/modi5.jpeg";
 import modi3 from "@/assets/extarctionanother.jpg";
+
+import mainswiper1 from '@/assets/mainswiper1.jpeg'
+import mainswiper2 from '@/assets/mainswiper2.jpg'
+// import mainswiper3 from '@/assets/mainswiper3.jpeg'
+import mainswiper4 from '@/assets/mainswiper4.jpeg'
+
+
+
 
 // import cofedesign from '@/assets/cofeedesign.png'
 import { toast } from "react-hot-toast";
@@ -133,7 +141,7 @@ export default function Home() {
       <div className="container-fluid about py-md-5 py-2 ">
         <div className="container py-md-5 py-0">
           <div className="row g-5">
-            <div className="  overflow-hidden d-md-none d-block max90">
+            {/* <div className="  overflow-hidden d-md-none d-block max90">
               <Image
                 // src={bannermain}
                 src={main1}
@@ -143,7 +151,49 @@ export default function Home() {
                 className="img-fluid w-100 object-fit-cover"
                 priority
               />
-            </div>
+            </div> */}
+
+            <div className="overflow-hidden  d-md-none d-block max90" >
+  <Swiper
+    modules={[ Autoplay]}
+    // Autoplay
+    autoplay={{ delay: 1000 }}
+    loop
+    className="w-100"
+  >
+    <SwiperSlide>
+      <Image
+        src={mainswiper1}
+        alt="Slide 1"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover mxheightset340"
+        priority
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Image
+        src={mainswiper2}
+        alt="Slide 2"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover mxheightset340"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Image
+        src={mainswiper4}
+        alt="Slide 3"
+        width={1920}
+        height={800}
+        className="img-fluid w-100 object-fit-cover mxheightset340"
+      />
+    </SwiperSlide>
+  </Swiper>
+</div>
+
+
+  
 
             <div className="col-lg-7 animate__animated animate__fadeInLeft ">
               <h2 className="display-2 f72  mb-4 textleft text-primary ">
@@ -172,7 +222,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div
+            {/* <div
               className="col-lg-5 wow fadeInRight mxheightset340  animate__animated animate__fadeInRight"
               data-wow-delay="0.2s"
             >
@@ -191,7 +241,54 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
+
+            <div
+  className="col-lg-5 wow fadeInRight mxheightset340 animate__animated animate__fadeInRight d-md-block d-none"
+  data-wow-delay="0.2s"
+>
+  <div className="position-relative h-100 d-md-block d-none">
+    <div className="position-relative w-100" style={{ height: '500px' }}>
+      <Swiper
+        modules={[ Autoplay]}
+        autoplay={{ delay: 1000 }}
+        loop
+        className="h-100 w-100"
+      >
+        <SwiperSlide>
+          <Image
+            src={mainswiper1}
+            alt="Image 1"
+            fill
+            className="img-fluid w-100 h-100 aboutimg1 rounded"
+            style={{ objectFit: 'cover' }}
+            sizes="100vw"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={mainswiper4}
+            alt="Image 2"
+            fill
+            className="img-fluid w-100 h-100 aboutimg1 rounded"
+            style={{ objectFit: 'cover' }}
+            sizes="100vw"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={mainswiper2}
+            alt="Image 3"
+            fill
+            className="img-fluid w-100 h-100 aboutimg1 rounded"
+            style={{ objectFit: 'cover' }}
+            sizes="100vw"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>

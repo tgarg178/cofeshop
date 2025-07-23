@@ -382,12 +382,7 @@ font-size: 42px !important;
 .fs18{
     font-size: 18px !important;
 }
-/* @media only screen and (max-width:600px)
-{
-.mxheightset340{
-height: 340px !important;
-}
-} */
+
 
 
 .h2size{
@@ -556,4 +551,11 @@ color: #0D6EFD !important;
   min-width: 80%;   /* Adjust as needed: try 60%, 70%, 80%, etc. */
   max-width: 90%;   /* Optional */
   width: fit-content; /* Keeps it from being 100% if content is smaller */
+}
+
+@media only screen and (max-width:600px)
+{
+.mxheightset340{
+height: 340px !important;
+}
 }

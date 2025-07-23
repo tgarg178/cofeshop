@@ -3,31 +3,8 @@ export default function Footer() {
   return (
     <>
     <div className="container-fluid  footernew  py-5 wow fadeIn" data-wow-delay="0.2s">
-      {/* footer */}
       <div className="container py-5">
-        {/* <div className="row g-5 mb-5 align-items-center">
-          <div className="col-lg-7">
-        
-          </div> 
-
-          <div className="col-lg-5">
-            <div className="d-flex align-items-center justify-content-center justify-content-lg-end">
-              <a className="btn btn-light btn-md-square me-3  btnhover2" href="#">
-                <i className="bi bi-facebook "></i>
-              </a>
-              <a className="btn btn-light btn-md-square me-3  btnhover2" href="#">
-                <i className="bi bi-twitter"></i>
-              </a>
-              <a className="btn btn-light btn-md-square me-3  btnhover2" href="#">
-                <i className="bi bi-instagram"></i>
-              </a>
-              <a className="btn btn-light btn-md-square me-0  btnhover2" href="#">
-                <i className="bi bi-linkedin"></i>
-              </a>
-            </div>
-          </div>
-        </div> */}
-
+       
         <div className="row g-5">
           <div className="col-md-6 col-lg-6 col-xl-4">
             <div className="footer-item d-flex flex-column">
@@ -54,17 +31,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* <div className="col-md-6 col-lg-6 col-xl-3">
-            <div className="footer-item d-flex flex-column">
-              <h4 className="text-white mb-4"> Product Categories</h4>
-              <Link href="/product">Automatic Coffee Machines</Link>
-              <Link href="/product">Semi-Automatic Coffee Machines</Link>
-              <Link href="/product">Blenders</Link>
-              <Link href="/product">Grinders</Link>
-              <Link href="/product">Coffee Brewers</Link>
-            </div>
-          </div> */}
-
+        
           <div className="col-md-6 col-lg-6 col-xl-4">
             <div className="footer-item d-flex flex-column">
               <h4 className="text-white mb-4">Contact Info</h4>

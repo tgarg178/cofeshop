@@ -202,10 +202,10 @@ const handleSubmit = async (
                     </div>
                     <div className="col-12 wow fadeInUp" data-wow-delay="0.2s">
                         <div className="h-100 overflow-hidden">
-                          <iframe
+                        <iframe
   className="w-100"
   style={{ height: '400px' }}
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4628746782934!2d78.39120327514704!3d17.447825701182343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f648b8f1d5%3A0x7c6a70ab65a76ad4!2sManeesh%20Enclave%2C%20Bhagyanagar%20Colony%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500090!5e0!3m2!1sen!2sin!4v1721723889753!5m2!1sen!2sin"
   loading="lazy"
   referrerPolicy="no-referrer-when-downgrade"
   allowFullScreen
