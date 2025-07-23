@@ -141,17 +141,7 @@ export default function Home() {
       <div className="container-fluid about py-md-5 py-2 ">
         <div className="container py-md-5 py-0">
           <div className="row g-5">
-            {/* <div className="  overflow-hidden d-md-none d-block max90">
-              <Image
-                // src={bannermain}
-                src={main1}
-                alt="DEVEX Anlagenbau"
-                width={1920}
-                height={800}
-                className="img-fluid w-100 object-fit-cover"
-                priority
-              />
-            </div> */}
+         
 
             <div className="overflow-hidden  d-md-none d-block max90" >
   <Swiper
@@ -159,7 +149,7 @@ export default function Home() {
     // Autoplay
     autoplay={{ delay: 1000 }}
     loop
-    className="w-100"
+    className="w-100 mt-5"
   >
     <SwiperSlide>
       <Image
