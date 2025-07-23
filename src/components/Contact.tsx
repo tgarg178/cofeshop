@@ -9,22 +9,7 @@ import emailjs from 'emailjs-com';
 
 
 const Contact = () => {
-  //   const handleSubmit = async (values: any, { resetForm }: any) => {
-  //   try {
-  //     toast.loading('Processing');
-  //     await emailjs.send("service_01ispk6", "template_tuey7rr", values, "FEguMM7ZerdBCdRrs");
 
-  //     toast.dismiss();
-  //     toast.success('Thank you. We will get back to you.');
-  //     resetForm();
-
-
-  //     // }
-  //   } catch (error) {
-  //     toast.error('try again later!');
-  //     console.error('Error submitting form:', error);
-  //   }
-  // };
 
 type EnquiryFormValues = {
   name: string;
@@ -81,20 +66,7 @@ const handleSubmit = async (
                             <h1 className="mb-4 fs700" >Let&rsquo;s Brew Success Together – Get in Touch</h1>
                             <p className="mb-3">Whether you&rsquo;re looking to install a new coffee machine, customize one for your café, or explore distribution opportunities — we’re here to help. Fill out the form and our team will get back to you shortly.
                             </p>
-                            {/* <div className="d-flex align-items-center mb-4">
-                              <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
-                <i className="bi bi-facebook"></i>
-              </a>
-              <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
-                <i className="bi bi-twitter"></i>
-              </a>
-              <a className="btn btn-light btn-md-square me-3 orangetext btnhover2new" href="#">
-                <i className="bi bi-instagram"></i>
-              </a>
-              <a className="btn btn-light btn-md-square me-0 orangetext btnhover2new" href="#">
-                <i className="bi bi-linkedin"></i>
-              </a>
-                            </div> */}
+                           
                             <div className="row g-4">
                                 <div className="col-12">
                                     <div className="d-inline-flex bg-white w-100 p-4">
@@ -138,7 +110,6 @@ const handleSubmit = async (
                       location: '',
                       message: '',
                     }}
-                    // validationSchema={validationSchema}
                     onSubmit={handleSubmit}
 
                   >

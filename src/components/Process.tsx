@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 
-import extractionImg from '@/assets/extarctionanother.jpg'
-import evaporationImg from '@/assets/evaporation.jpg'
-import dryingImg from '@/assets/drying.jpg'
-import thermalImg from '@/assets/evaporation.jpg'
-import testcenterImg from '@/assets/etxtcenter.jpg'
+import extractionImg from '@/assets/extarctionanother.webp'
+import evaporationImg from '@/assets/evaporation.webp'
+import dryingImg from '@/assets/drying.webp'
+import thermalImg from '@/assets/evaporation.webp'
+import testcenterImg from '@/assets/etxtcenter.webp'
 import Link from 'next/link';
 import 'animate.css';
 
@@ -59,7 +59,6 @@ const Process = () => {
 
             <section className="container py-5">
       <div className="text-center mb-5">
-        {/* <h2 className="fw-bold">Our Process</h2> */}
         <p className="parafamily " >Our process blends innovation, precision, and sustainability to craft exceptional coffee products. From clean extraction and efficient evaporation to gentle drying and controlled thermal treatment, every stage is carefully engineered to preserve natural flavors, enhance purity, and ensure product safety. With advanced technology and a commitment to quality, we transform raw ingredients into premium coffee solutions—responsibly and consistently.
 
 </p>
@@ -80,12 +79,10 @@ const Process = () => {
                   height={300}
                   className="rounded img-fluid object-fit-cover"
                   style={{ objectFit: 'cover',height:'250px' , width: '100%' }}
-                //   maxHeight: '150px'
                 />
               </div>
            <div  className="mb-3 col-lg-6  col-12  text-center animate__animated animate__fadeInRight">
               <h2 className='orangetext'>{step.title}</h2>
-               {/* <h5 className="fw-bold px-3 ">{step.title}</h5> */}
               <p className="text-black px-3 parafamily">{step.desc}</p>
             </div>
           </div>

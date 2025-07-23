@@ -9,7 +9,6 @@ export default function Navbar() {
 
   useEffect(() => {
     
-    // Dynamically import Collapse only on client
     import('bootstrap/js/dist/collapse').then(({ default: Collapse }) => {
       const collapseEl = document.getElementById('navbarNavDropdown');
       if (collapseEl?.classList.contains('show')) {
@@ -55,7 +54,7 @@ export default function Navbar() {
 
                <GlobalEnquiryForm className="btn  backgoundoramge text-white rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Get In Touch"
           />
-              {/* <Link className="btn skybluebackgound py-3 px-5 px-md-5 ms-2 me-2 text-white" href="#">Get In Touch</Link> */}
+          
             </ul>
           </div>
         </div>

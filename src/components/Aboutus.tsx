@@ -5,14 +5,6 @@ import Link from 'next/link';
 import GlobalEnquiryForm from '@/components/GlobalPopupEnquiry';
 
 
-// import Image from 'next/image';
-
-
-// import newone1 from '@/assets/newone1.png'
-
-// import cofee4 from '@/assets/cofee4.jpg'
-// import cofee3 from '@/assets/cofee3.avif'
-
 
 const Aboutus = () => {
   return (
@@ -97,7 +89,6 @@ Our mission is to transform coffee processing through innovative systems that:</
       <li>Enable manufacturers to scale confidently and sustainably</li>    </ul>
          
    <p className='parafamily'>      We don’t just build coffee plants—we build trust, performance, and long-term success.</p>
-          {/* <a  className="btn skybluebackgound py-3 px-4 px-md-5 ms-2 text-white" href="#">Any Enuiry</a> */}
 
 
                <GlobalEnquiryForm className="btn  backgoundoramge text-white rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Any Enuiry"
