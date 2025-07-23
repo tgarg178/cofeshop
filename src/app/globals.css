@@ -461,7 +461,9 @@ font-size: 42px !important;
     font-weight: 700 !important;
 }
 .orangetext {
-    color: rgb(246, 138, 10) !important;
+    /* color: rgb(246, 138, 10) !important;
+     */
+     color: #a9702d !important;
 }
 .textmuted
 {
@@ -469,7 +471,9 @@ font-size: 42px !important;
       text-decoration: none !important;
 }
 .backgoundoramge{
-  background-color: rgb(246, 138, 10) !important;
+  /* background-color: rgb(246, 138, 10) !important; */
+
+  background-color: #a9702d !important;
 } 
 
 @media only screen and (max-width:600px)  and (min-width:350px)
@@ -546,7 +550,7 @@ color: #0D6EFD !important;
    color: rgb(246, 138, 10) !important;
 }
 .borderbottom{
-  border-bottom:1px solid #0D6EFD;
+  border-bottom:1px solid #a9702d;
 } 
 .custom-width {
   min-width: 80%;   /* Adjust as needed: try 60%, 70%, 80%, etc. */
