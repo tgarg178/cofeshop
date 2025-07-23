@@ -543,6 +543,7 @@ color: #0D6EFD !important;
 .overlayText {
   z-index: 10;
   max-width: 100%;
+   color: rgb(246, 138, 10) !important;
 }
 .borderbottom{
   border-bottom:1px solid #0D6EFD;

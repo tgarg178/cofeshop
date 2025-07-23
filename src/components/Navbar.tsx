@@ -23,7 +23,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-white borderbottom py-3 px-3 px-lg-5 max90 mt-md-4 ">
         <div className="container-fluid">
           <Link href="/" className="navbar-brand d-flex align-items-center">
-            <span className="fw-bold text-primary f35">Quality Industries</span>
+            <span className="fw-bold orangetext f35">Quality Industries</span>
           </Link>
 
           <button
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <Link className="nav-link f21" href="/contact">Contact</Link>
               </li>
 
-               <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Get In Touch"
+               <GlobalEnquiryForm className="btn  backgoundoramge text-white rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Get In Touch"
           />
               {/* <Link className="btn skybluebackgound py-3 px-5 px-md-5 ms-2 me-2 text-white" href="#">Get In Touch</Link> */}
             </ul>

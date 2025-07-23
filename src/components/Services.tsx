@@ -186,7 +186,7 @@ const Services = () => {
     Enquire About Our Solutions
   </button> */}
 
-     <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Enquire About Our Solutions"
+     <GlobalEnquiryForm className="btn  backgoundoramge text-white rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Enquire About Our Solutions"
           />
 
 </div>

@@ -75,7 +75,7 @@ const EnquiryForm: FC<Props> = ({  onChanges, placeholder, }) => {
                     <ErrorMessage name="message" component="div" className="error text-danger" />
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn skybluebackgound">
+                    <button type="submit" className="btn backgoundoramge text-white">
                         Submit
                     </button>
                 </div>

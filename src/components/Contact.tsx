@@ -77,7 +77,7 @@ const handleSubmit = async (
                 <div className="row g-5">
                     <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div>
-                            <h4 className="text-primary">Contact Us</h4>
+                            <h4 className="orangetext">Contact Us</h4>
                             <h1 className="mb-4 fs700" >Let&rsquo;s Brew Success Together – Get in Touch</h1>
                             <p className="mb-3">Whether you&rsquo;re looking to install a new coffee machine, customize one for your café, or explore distribution opportunities — we’re here to help. Fill out the form and our team will get back to you shortly.
                             </p>
@@ -98,7 +98,7 @@ const handleSubmit = async (
                             <div className="row g-4">
                                 <div className="col-12">
                                     <div className="d-inline-flex bg-white w-100 p-4">
-                                        <i className=" me-4 bi bi-geo-alt-fill text-primary iconfontsize"></i>
+                                        <i className=" me-4 bi bi-geo-alt-fill orangetext iconfontsize"></i>
                                         <div>
                                             <h4>Address</h4>
                                             <p className="mb-0">123 North tower New York, USA</p>
@@ -107,7 +107,7 @@ const handleSubmit = async (
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="d-inline-flex bg-white w-100 p-4 gap-4">
-                                        <i className="bi bi-envelope-fill me-2  text-primary iconfontsize"></i>
+                                        <i className="bi bi-envelope-fill me-2  orangetext iconfontsize"></i>
                                         <div>
                                             <h4>Mail Us</h4>
                                             <p className="mb-0">info@example.com</p>
@@ -116,7 +116,7 @@ const handleSubmit = async (
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="d-inline-flex bg-white w-100 p-4 gap-4">
-                                        <i className="bi bi-telephone-fill  text-primary iconfontsize"></i>
+                                        <i className="bi bi-telephone-fill  orangetext iconfontsize"></i>
                                         <div>
                                             <h4>Telephone</h4>
                                             <p className="mb-0">(+012) 3456 7890 123</p>
@@ -190,7 +190,7 @@ const handleSubmit = async (
                           </div>
                         </div>
                         <div className="d-grid">
-                          <button type="submit" className="btn btn-primary w-100 py-3">
+                          <button type="submit" className="btn backgoundoramge w-100 py-3 text-white">
                             Submit
                           </button>
                         </div>

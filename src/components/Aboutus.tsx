@@ -35,14 +35,14 @@ const Aboutus = () => {
         <div className='mt-4 mb-4 pt-4  max70'>
 
 
-          <h2 className='text-primary'>
+          <h2 className='orangetext'>
            Who We Are</h2>
 
   <p className='parafamily'>We are a leading provider of process engineering solutions dedicated exclusively to the coffee industry. From green bean handling to the production of instant and soluble coffee, our expertise lies in delivering turnkey plant systems that are technologically advanced, energy-efficient, and hygienic.
 
 </p>
 
-  <h2 className='text-primary'>  What We Do</h2> 
+  <h2 className='orangetext'>  What We Do</h2> 
    <p className='parafamily'>
   
 
@@ -65,7 +65,7 @@ const Aboutus = () => {
 
   </p>
 
-   <h2 className='text-primary'>  Our Expertise
+   <h2 className='orangetext'>  Our Expertise
 </h2>
     <p  className='parafamily'>With decades of hands-on experience and a deep understanding of global coffee processing standards, we offer:
 </p>
@@ -82,7 +82,7 @@ const Aboutus = () => {
 <p className='parafamily'>
 We work closely with clients to deliver not just machinery, but integrated process solutions that align with their business goals.</p>
       
- <h2 className='text-primary'>  Our Mission</h2>
+ <h2 className='orangetext'>  Our Mission</h2>
 <p className='parafamily'>
 Our mission is to transform coffee processing through innovative systems that:</p>
 
@@ -100,7 +100,7 @@ Our mission is to transform coffee processing through innovative systems that:</
           {/* <a  className="btn skybluebackgound py-3 px-4 px-md-5 ms-2 text-white" href="#">Any Enuiry</a> */}
 
 
-               <GlobalEnquiryForm className="btn  skybluebackgound rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Any Enuiry"
+               <GlobalEnquiryForm className="btn  backgoundoramge text-white rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 " buttonText="Any Enuiry"
           />
 
              
