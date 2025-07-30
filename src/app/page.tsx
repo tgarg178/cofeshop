@@ -5,16 +5,16 @@
 
 
 
-import { toast } from "react-hot-toast";
+// import { toast } from "react-hot-toast";
 
-import { ErrorMessage, Field, Form, Formik } from "formik";
-import emailjs from "emailjs-com";
+// import { ErrorMessage, Field, Form, Formik } from "formik";
+// import emailjs from "emailjs-com";
 
 import { Button } from 'react-bootstrap';
 
 import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav,  Container } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import Image from 'next/image';
@@ -74,13 +74,13 @@ export default function Home() {
       }
     });
   }, [pathname]);
-const banners = [
-  banner,
-banner,
-banner,
- banner,
-banner,
-];
+// const banners = [
+//   banner,
+// banner,
+// banner,
+//  banner,
+// banner,
+// ];
 
 
 const features = [
@@ -410,7 +410,7 @@ const testimonials = [
           <SwiperSlide key={index}>
             <div className='card py-3'>
               <div className="d-flex align-items-start gap-3">
-                <img src={item.icon.src} alt={item.title} width={50} height={50} />
+                <Image src={item.icon.src} alt={item.title} width={50} height={50} />
                 <div>
                   <h6 className="fw-bold mb-1 goldenh6">{item.title}</h6>
                   <p className="mb-0 text-muted small">{item.desc}</p>
@@ -449,7 +449,7 @@ const testimonials = [
          Our comprehensive expertise ensures that every step — from aroma-optimizing extraction, efficient evaporation, to spray-drying and freeze-drying — is engineered for maximum quality, consistency, and productivity.
           </p>
           <p>
-         Whether you're a small-batch specialty producer or a large-scale industrial manufacturer, we offer customized solutions, global support, and a deep commitment to your long-term success. At Quality Industries, we don’t just build coffee plants — we build performance, trust, and a sustainable future for coffee.
+         Whether you are a small-batch specialty producer or a large-scale industrial manufacturer, we offer customized solutions, global support, and a deep commitment to your long-term success. At Quality Industries, we don’t just build coffee plants — we build performance, trust, and a sustainable future for coffee.
           </p>
           
           
