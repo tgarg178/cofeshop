@@ -112,67 +112,68 @@ const features = [
 ];
 
 const features2 = [
- {
-    title: '2 Year Warranty',
+  {
+    title: 'Turnkey Plant Solutions',
     icon: f1,
-    desc: 'Golden coffee roasters come with a 2-year warranty for worry-free performance.',
+    desc: 'We deliver fully integrated, custom-engineered coffee processing systems from green bean to final product.',
   },
   {
-    title: '3rd Party Software Compliance',
+    title: 'Advanced Automation',
     icon: f2,
-    desc: 'Compatible with third-party software such as Artisan and Cropster for seamless roasting control.',
+    desc: 'Automated control systems ensure consistency, precision, and ease of operation across all stages.',
   },
   {
-    title: 'Air Flow Control',
+    title: 'Energy-Efficient Design',
     icon: f3,
-    desc: 'Precise airflow adjustment enables consistent and even roasting results.',
+    desc: 'Our systems are built for maximum energy savings without compromising on performance.',
   },
   {
-    title: 'Conductive Roasting',
+    title: 'Extraction Expertise',
     icon: f4,
-    desc: 'Ensures uniform heat transfer through conduction for enhanced bean flavor development.',
+    desc: 'Specialized extraction technologies preserve coffee aroma and flavor during processing.',
   },
   {
-    title: 'Double Wall Drum',
+    title: 'Evaporation Efficiency',
     icon: f5,
-    desc: 'Reduces heat loss and improves roast stability using an insulated dual-layer drum.',
+    desc: 'High-performance evaporators concentrate coffee with minimal aroma loss and energy use.',
   },
   {
-    title: 'Drum Speed Control',
+    title: 'Drying Technologies',
     icon: f6,
-    desc: 'Allows users to fine-tune the drum rotation speed for optimal roast profiles.',
+    desc: 'We offer both spray-drying and freeze-drying solutions to suit your product goals.',
   },
   {
-    title: 'Energy Efficiency',
+    title: 'Global Installation & Support',
     icon: f7,
-    desc: 'Designed for maximum energy savings while maintaining peak roasting performance.',
+    desc: 'We provide worldwide commissioning, technical support, and 24/7 maintenance services.',
   },
   {
-    title: 'Flame Level Control',
+    title: 'Compliance & Hygiene Standards',
     icon: f8,
-    desc: 'Adjustable flame settings help regulate temperature for each roast stage.',
+    desc: 'Our systems adhere to global food safety and hygiene standards throughout the plant.',
   },
   {
-    title: 'Fully Automation',
+    title: 'Custom Engineering',
     icon: f9,
-    desc: 'Offers full automation for easy and repeatable roast cycles with minimal operator input.',
+    desc: 'We design and fabricate equipment tailored to your process requirements and space constraints.',
   },
   {
-    title: 'High Thermal Insulation',
+    title: 'Sustainable Operations',
     icon: f10,
-    desc: 'High-grade insulation materials preserve heat and reduce energy consumption.',
+    desc: 'Our technology supports sustainable coffee processing with low emissions and waste.',
   },
   {
-    title: 'Low NOx',
+    title: 'Scalable Architecture',
     icon: f11,
-    desc: 'Eco-friendly burner design ensures low nitrogen oxide (NOx) emissions for a greener roast.',
+    desc: 'We help clients scale production with modular, future-ready system designs.',
   },
   {
-    title: 'Modulated Burner',
+    title: 'Long-Term Partnerships',
     icon: f12,
-    desc: 'Automatically modulates flame output for consistent and precise temperature control.',
-  }
+    desc: 'Beyond equipment, we build lasting relationships based on trust, performance, and shared growth.',
+  },
 ];
+
 
 const testimonials = [
   {
@@ -253,13 +254,7 @@ const testimonials = [
 
    
 
-    {/* Social Links */}
-    {/* <Nav.Link href="#"><i className="fab fa-facebook-f"></i></Nav.Link>
-    <Nav.Link href="#"><i className="fab fa-youtube"></i></Nav.Link>
-    <Nav.Link href="#"><i className="fab fa-instagram"></i></Nav.Link>
-    <Nav.Link href="#"><i className="fab fa-twitter"></i></Nav.Link>
-    <Nav.Link href="#"><i className="fas fa-globe"></i></Nav.Link> */}
-
+  
 
        <Button
       variant="outline-light"
@@ -279,7 +274,6 @@ const testimonials = [
           </Container>
         </Navbar>
   
-        {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Pagination, EffectCreative]}
           navigation={{ nextEl: '.custom-next', prevEl: '.custom-prev' }}
@@ -290,29 +284,9 @@ const testimonials = [
             next: { translate: ['100%', 0, 0] },
           }}
           loop
-          className="mySwiper  rounded-5"
+          className="mySwiper  rounded-5 d-md-block d-none"
         >
-          {/* {banners.map((src, index) => (
-            <SwiperSlide key={index}>
-              <div className="position-relative" style={{ width: '100%', height: '800px' }}>
-  <Image
-    src={src}
-    alt={`Slide ${index + 1}`}
-    fill
-    className="object-cover w-100 h-100"
-    priority={index === 0}
-  />
-  <div
-    className="position-absolute top-0 start-0 w-100 h-100"
-    style={{
-      background: 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))',
-    }}
-  ></div>
-</div>
-
-            </SwiperSlide>
-          ))} */}
-
+        
 
 
            <SwiperSlide className="swiperslid">
@@ -337,6 +311,23 @@ const testimonials = [
 </SwiperSlide>
 
         </Swiper>
+<div className="position-relative w-100 responsive-banner rounded overflow-hidden d-md-none d-block">
+  <Image
+    src={banner}
+    alt="banner"
+    fill
+    className="object-cover w-100 h-100"
+    priority
+  />
+  <div
+    className="position-absolute top-0 start-0 w-100 h-100"
+    style={{
+      background: 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))',
+    }}
+  ></div>
+</div>
+
+        
       {/* <div
                   className="position-absolute top-50 start-50 translate-middle text-white text-center"
                   style={{
