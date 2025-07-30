@@ -1,12 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import BootstrapClient from '@/components/BootstrapClient'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Toaster } from "react-hot-toast";
-
+import { Poppins } from 'next/font/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +17,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
 export const metadata = {
   title: "Innovative Coffee Processing Solutions | Turnkey Plant Engineering",
   description:
@@ -56,11 +60,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.className}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >  <BootstrapClient />   
-      <Navbar />
+      >  <BootstrapClient />     
+      {/* <Navbar /> */}
             <Toaster position="top-right" />
         {children}
          <Footer />

@@ -1,16 +1,24 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import logo2 from '../assets/logonew.png';
+
 export default function Footer() {
   return (
     <>
-    <div className="container-fluid   backgoundoramge  py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div className="container-fluid   backgoundoramge  puzzle py-5 wow fadeIn  " data-wow-delay="0.2s">
       <div className="container py-5">
        
         <div className="row g-5">
           <div className="col-md-6 col-lg-6 col-xl-4">
             <div className="footer-item d-flex flex-column">
-              <h3 className="text-white mb-4">
-                <i className="bi bi-lightning-fill text-white"></i>Quality Industries
-              </h3>
+               <Image
+    src={logo2}
+    alt="Golden Coffee Roasters Logo"
+    width={280}
+    height={110}
+    priority
+  
+  />
               <p className="mb-3 text-white ">
           At Quality Industries, we specialize in complete coffee processing solutions — blending innovation, hygiene, and precision to help manufacturers achieve consistent quality and sustainable growth.
 
@@ -52,8 +60,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
-        <div className="container-fluid backgoundoramge  py-4 border-top">
+
+         <div className="container-fluid puzzle   border-top">
             <div className="container">
                 <div className="row g-4 align-items-center">
                     <div className="col-md-6 text-center text-md-start mb-md-0">
@@ -68,9 +76,11 @@ export default function Footer() {
                 </div>
             </div>
         </div>
+    </div>
+     
 
 
-        <a href="#" className="btn backgoundoramge btn-lg-square back-to-top"><i className="bi bi-arrow-up text-white"></i></a>   
+        {/* <a href="#" className="btn backgoundoramge btn-lg-square back-to-top"><i className="bi bi-arrow-up text-white"></i></a>    */}
         </>
   );
 

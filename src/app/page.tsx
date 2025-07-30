@@ -1,12 +1,47 @@
 "use client";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination ,} from "swiper/modules";
+;
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "animate.css";
-import GlobalEnquiryForm from "@/components/GlobalPopupEnquiry";
+
+
+
+
+import { toast } from "react-hot-toast";
+
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import emailjs from "emailjs-com";
+
+import { Button } from 'react-bootstrap';
+
+import React, { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
+import Image from 'next/image';
+import banner from '../assets/machine1baneer.webp'; // Your actual image
+import logo from '../assets/logomain.png';
+import logo2 from '../assets/logonew.png';
+
+import cofemanu2 from '../assets/cofemanu2.webp'
+
+import { Autoplay } from 'swiper/modules';
+import counseling from '../assets/counseling.png';
+import warranty from '../assets/warranty.png';
+import support from '../assets/support.png';
+import technology from '../assets/technology.png';
+import sustainability from '../assets/sustainability.png';
+import f1 from '../assets/f1.png';
+import f2 from '../assets/f2.png';
+import f3 from '../assets/f3.png';
+import f4 from '../assets/f4.png';
+import f5 from '../assets/f5.png';
+import f6 from '../assets/f6.png';
+import f7 from '../assets/f7.png';
+import f8 from '../assets/f8.png';
+import f9 from '../assets/f9.png';
+import f10 from '../assets/f10.png';
+import f11 from '../assets/f11.png';
+import f12 from '../assets/f12.png';
 
 
 
@@ -17,529 +52,423 @@ import test4 from "@/assets/test4.webp";
 import test5 from "@/assets/test5.webp";
 import test6 from "@/assets/test6.webp";
 
-import cofemanu1 from "@/assets/cofemanu2.webp";
-import cofee3 from "@/assets/process1.webp";
-
-import cofeepalnt2 from "@/assets/cofeplant3.webp";
-
-import modi2 from "@/assets/modi5.webp";
-import modi3 from "@/assets/extarctionanother.webp";
-
-import mainswiper1 from '@/assets/mainswiper1.webp'
-import mainswiper2 from '@/assets/mainswiper2.webp'
-import mainswiper4 from '@/assets/mainswiper4.webp'
 
 
+// Swiper and Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
-import { toast } from "react-hot-toast";
+export default function Home() {
+  const pathname = usePathname();
 
-import { ErrorMessage, Field, Form, Formik } from "formik";
-import emailjs from "emailjs-com";
+  useEffect(() => {
+    import('bootstrap/js/dist/collapse').then(({ default: Collapse }) => {
+      const collapseEl = document.getElementById('navbarNavDropdown');
+      if (collapseEl?.classList.contains('show')) {
+        const bsCollapse = Collapse.getInstance(collapseEl) || new Collapse(collapseEl);
+        bsCollapse.hide();
+      }
+    });
+  }, [pathname]);
+const banners = [
+  banner,
+banner,
+banner,
+ banner,
+banner,
+];
 
+
+const features = [
+  {
+    icon: sustainability,
+    title: 'Sustainability',
+    desc: 'We prioritize a greener future through eco-friendly practices',
+  },
+  {
+    icon: technology,
+    title: 'Technology',
+    desc: 'Embrace innovation with cutting-edge technology for roasting experience',
+  },
+  {
+    icon: support,
+    title: '24/7 Technical Support',
+    desc: 'Enjoy round-the-clock support to address queries and troubleshoot',
+  },
+  {
+    icon: warranty,
+    title: 'International Warranty',
+    desc: 'Trust in our products with a comprehensive international warranty',
+  },
+  {
+    icon:counseling,
+      title: 'Counseling Services',
+    desc: 'We offer valuable insights and support for your coffee roasting journey',
+  }
+];
+
+const features2 = [
+ {
+    title: '2 Year Warranty',
+    icon: f1,
+    desc: 'Golden coffee roasters come with a 2-year warranty for worry-free performance.',
+  },
+  {
+    title: '3rd Party Software Compliance',
+    icon: f2,
+    desc: 'Compatible with third-party software such as Artisan and Cropster for seamless roasting control.',
+  },
+  {
+    title: 'Air Flow Control',
+    icon: f3,
+    desc: 'Precise airflow adjustment enables consistent and even roasting results.',
+  },
+  {
+    title: 'Conductive Roasting',
+    icon: f4,
+    desc: 'Ensures uniform heat transfer through conduction for enhanced bean flavor development.',
+  },
+  {
+    title: 'Double Wall Drum',
+    icon: f5,
+    desc: 'Reduces heat loss and improves roast stability using an insulated dual-layer drum.',
+  },
+  {
+    title: 'Drum Speed Control',
+    icon: f6,
+    desc: 'Allows users to fine-tune the drum rotation speed for optimal roast profiles.',
+  },
+  {
+    title: 'Energy Efficiency',
+    icon: f7,
+    desc: 'Designed for maximum energy savings while maintaining peak roasting performance.',
+  },
+  {
+    title: 'Flame Level Control',
+    icon: f8,
+    desc: 'Adjustable flame settings help regulate temperature for each roast stage.',
+  },
+  {
+    title: 'Fully Automation',
+    icon: f9,
+    desc: 'Offers full automation for easy and repeatable roast cycles with minimal operator input.',
+  },
+  {
+    title: 'High Thermal Insulation',
+    icon: f10,
+    desc: 'High-grade insulation materials preserve heat and reduce energy consumption.',
+  },
+  {
+    title: 'Low NOx',
+    icon: f11,
+    desc: 'Eco-friendly burner design ensures low nitrogen oxide (NOx) emissions for a greener roast.',
+  },
+  {
+    title: 'Modulated Burner',
+    icon: f12,
+    desc: 'Automatically modulates flame output for consistent and precise temperature control.',
+  }
+];
 
 const testimonials = [
   {
     name: "Estella Castillo",
     role: "Dunes & Beans Cafe",
-    text: "Ideal’s coffee machine has transformed how we serve coffee. It’s reliable, stylish, and consistently delivers exceptional brews, even during our busiest hours. The automation features have also reduced our barista workload.",
+    text: "Ideal's turnkey coffee processing systems have completely transformed our production line. From green bean handling to final drying, every step is now streamlined, efficient, and quality-controlled.",
     image: test1,
   },
   {
     name: "Ricardo Alvarez",
     role: "Madrid Mornings Cafe",
-    text: "We chose Ideal for their multi-boiler machines — and it’s been the best investment. Their pricing is surprisingly affordable for such advanced features. Quality, consistency, and savings all in one.",
+    text: "Working with Ideal gave us more than just machines — they delivered a complete solution. Their extraction and drying technology preserved the rich aroma of our beans better than anything we’ve used before.",
     image: test2,
   },
   {
     name: "Harshita Jain",
     role: "Roasted Bliss",
-    text: "We use Ideal Coffee Machines across all our outlets. The performance, easy maintenance, and consistency in every cup have helped standardize quality at scale — something no other brand could deliver.",
+    text: "What sets Ideal apart is their deep expertise and dedication. Their automated systems brought precision, efficiency, and consistent quality to our operations, all while reducing manual intervention.",
     image: test3,
   },
   {
     name: "Sonia Fernandes",
     role: "Cafe Mocha Vibe",
-    text: "Installing Ideal’s coffee machine gave our café a competitive edge. The intuitive controls and sleek design blend perfectly with our aesthetic, while the consistent output keeps our customers coming back.",
+    text: "From equipment design to on-site commissioning, Ideal handled everything with professionalism. The support team is responsive and proactive — we truly feel like we’re in a long-term partnership.",
     image: test4,
   },
   {
     name: "Vikram Jha",
     role: "Bean Brew Express",
-    text: "Since switching to Ideal, we’ve noticed happier customers and smoother service. The machine heats up quickly, maintains perfect temperature, and brews with precision. Support from their team has also been top-notch.",
+    text: "Thanks to Ideal’s energy-efficient technologies, we’ve reduced operating costs without compromising quality. Their commitment to sustainability and food safety matches our own values.",
     image: test6,
   },
   {
     name: "Ritika Menon",
     role: "The Roast Room",
-    text: "Ideal’s machines combine craftsmanship with innovation. From the grinding mechanism to pressure control, every detail is engineered for perfection. It’s elevated both the taste and efficiency in our café.",
+    text: "Ideal doesn’t just supply equipment — they deliver results. Their systems helped us scale our production while maintaining premium taste, aroma, and compliance with international standards.",
     image: test5,
   },
 ];
 
-export default function Home() {
- 
-  type EnquiryFormValues = {
-    name: string;
-    email: string;
-    contact_number: string;
-    course: string;
-    location: string;
-    message: string;
-  };
-  const handleSubmit = async (
-    values: EnquiryFormValues,
-    { resetForm }: { resetForm: () => void }
-  ) => {
-    try {
-      toast.loading("Processing");
 
-      await emailjs.send(
-        "service_01ispk6",
-        "template_tuey7rr",
-        values as Record<string, string>,
-        "FEguMM7ZerdBCdRrs"
-      );
-
-      toast.dismiss();
-      toast.success("Thank you. We will get back to you.");
-      resetForm();
-    } catch (error) {
-      toast.error("Try again later!");
-      console.error("Error submitting form:", error);
-    }
-  };
   return (
 
 
 
-    <section>
-      <div className="container-fluid about py-md-5 py-2 ">
-        <div className="container py-md-5 py-0">
-          <div className="row g-5">
-         
+  <>
+     <section className="position-relative max90banner mt-md-4 ">
+        {/* Navbar */}
+        <Navbar expand="lg" variant="dark" className={` navbarmain x`}>
+          <Container fluid>
+          <Navbar.Brand href="#">
+  <Image
+    src={logo2}
+    alt="Golden Coffee Roasters Logo"
+    width={200}
+    height={70}
+    priority
+    className="d-md-block d-none"
+  />
+   <Image
+    src={logo}
+    alt="Golden Coffee Roasters Logo"
+    width={250}
+    height={70}
+    priority
+    className="d-md-none d-block"
+  />
+</Navbar.Brand>
+          <Navbar.Toggle aria-controls="coffee-navbar" className="custom-toggler" />
+<Navbar.Collapse id="coffee-navbar">
+  <Nav className="ms-auto gap-4 " >
+    <Nav.Link href="#">Home </Nav.Link>
+    <Nav.Link href="#">About</Nav.Link>
+    <Nav.Link href="#">Process</Nav.Link>
 
-            <div className="overflow-hidden  d-md-none d-block max90" >
-  <Swiper
-    modules={[ Autoplay]}
-    autoplay={{ delay: 1000 }}
-    loop
-    className="w-100 mt-5"
-  >
-    <SwiperSlide>
-      <Image
-        src={mainswiper1}
-        alt="Slide 1"
-        width={1920}
-        height={800}
-        className="img-fluid w-100 object-fit-cover mxheightset340"
-        priority
-      />
-    </SwiperSlide>
-    <SwiperSlide>
-      <Image
-        src={mainswiper2}
-        alt="Slide 2"
-        width={1920}
-        height={800}
-        className="img-fluid w-100 object-fit-cover mxheightset340"
-      />
-    </SwiperSlide>
-    <SwiperSlide>
-      <Image
-        src={mainswiper4}
-        alt="Slide 3"
-        width={1920}
-        height={800}
-        className="img-fluid w-100 object-fit-cover mxheightset340"
-      />
-    </SwiperSlide>
-  </Swiper>
-</div>
+    <Nav.Link href="#">Products</Nav.Link>
+    <Nav.Link href="#">Contact</Nav.Link>
+
+   
+
+    {/* Social Links */}
+    {/* <Nav.Link href="#"><i className="fab fa-facebook-f"></i></Nav.Link>
+    <Nav.Link href="#"><i className="fab fa-youtube"></i></Nav.Link>
+    <Nav.Link href="#"><i className="fab fa-instagram"></i></Nav.Link>
+    <Nav.Link href="#"><i className="fab fa-twitter"></i></Nav.Link>
+    <Nav.Link href="#"><i className="fas fa-globe"></i></Nav.Link> */}
 
 
+       <Button
+      variant="outline-light"
+      className="rounded-pill px-4  fw-semibold btnmain"
+      style={{
+        borderColor: '#707070',
+       
+        background: 'rgba(255, 255, 255, 0.05)',
+        backdropFilter: 'blur(10px)',
+      }}
+      href="#contact"
+    >
+      Get in Touch
+    </Button>
+  </Nav>
+</Navbar.Collapse>
+          </Container>
+        </Navbar>
   
-
-            <div className="col-lg-7 animate__animated animate__fadeInLeft ">
-              <h2 className="display-2 f72  mb-4 textleft orangetext ">
-                Empowering Coffee Processing Excellence
-              </h2>
-              <h4 className=" text-uppercase fw-bold mb-4 textleft">
-                From Bean to Brew, We Deliver Complete Coffee Plant Solutions
-              </h4>
-
-              <p className="mb-5 fs-5 textleft ">
-                As a leading name in coffee process engineering, we provide
-                turnkey systems that are technologically advanced, hygienic, and
-                energy-efficient. Whether it’s extraction, evaporation, or spray
-                drying, our solutions preserve coffee’s natural richness while
-                optimizing every stage of production.
-              </p>
-
-              <div className="d-flex justify-content-center flex-wrap  gap-md-0  gap-3 justify-content-md-start flex-shrink-0 mb-4">
-             
-
-                <GlobalEnquiryForm
-                  className="btn  backgoundoramge text-white rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 "
-                  buttonText="Request a Quote"
-                />
-              </div>
-            </div>
-
-          
-
-            <div
-  className="col-lg-5 wow fadeInRight mxheightset340 animate__animated animate__fadeInRight d-md-block d-none"
-  data-wow-delay="0.2s"
->
-  <div className="position-relative h-100 d-md-block d-none">
-    <div className="position-relative w-100" style={{ height: '500px' }}>
-      <Swiper
-        modules={[ Autoplay]}
-        autoplay={{ delay: 1000 }}
-        loop
-        className="h-100 w-100"
-      >
-        <SwiperSlide>
-          <Image
-            src={mainswiper1}
-            alt="Image 1"
-            fill
-            className="img-fluid w-100 h-100 aboutimg1 rounded"
-            style={{ objectFit: 'cover' }}
-            sizes="100vw"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={mainswiper4}
-            alt="Image 2"
-            fill
-            className="img-fluid w-100 h-100 aboutimg1 rounded"
-            style={{ objectFit: 'cover' }}
-            sizes="100vw"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={mainswiper2}
-            alt="Image 3"
-            fill
-            className="img-fluid w-100 h-100 aboutimg1 rounded"
-            style={{ objectFit: 'cover' }}
-            sizes="100vw"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  </div>
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Navigation, Pagination, EffectCreative]}
+          navigation={{ nextEl: '.custom-next', prevEl: '.custom-prev' }}
+          pagination={{ el: '.custom-pagination', type: 'fraction' }}
+          effect="creative"
+          creativeEffect={{
+            prev: { shadow: true, translate: [0, 0, -400] },
+            next: { translate: ['100%', 0, 0] },
+          }}
+          loop
+          className="mySwiper  rounded-5"
+        >
+          {/* {banners.map((src, index) => (
+            <SwiperSlide key={index}>
+              <div className="position-relative" style={{ width: '100%', height: '800px' }}>
+  <Image
+    src={src}
+    alt={`Slide ${index + 1}`}
+    fill
+    className="object-cover w-100 h-100"
+    priority={index === 0}
+  />
+  <div
+    className="position-absolute top-0 start-0 w-100 h-100"
+    style={{
+      background: 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))',
+    }}
+  ></div>
 </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="position-relative max90 d-md-block d-none">
-        <Image
-          src={modi2}
-          alt="DEVEX Anlagenbau"
-          width={1920}
-          height={600}
-          className=" w-100 "
-          priority
-        />
+            </SwiperSlide>
+          ))} */}
 
-        <div className="position-absolute top-50 start-50 translate-middle text-center overlayText">
-          <h2 className="orangetext bg-white bg-opacity-75 px-4 py-2 d-inline-block fw-semibold">
-            <GlobalEnquiryForm
-              className="  rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 text-decoration-none orangetext"
-              buttonText="   Looking to Set Up or Upgrade Your Coffee Processing Plant? "
-            />
-          </h2>
-        </div>
-      </div>
 
-      <div className="position-relative w-100 overflow-hidden d-md-none d-block">
-        <Image
-          src={modi2}
-          alt="DEVEX Anlagenbau"
-          width={1920}
-          height={800}
-          className="img-fluid w-100 object-fit-cover"
-          priority
-        />
-        <div className="position-absolute top-50 start-50 translate-middle text-center overlayText">
-          <div className="orangetext bg-white bg-opacity-75 px-0 px-md-4 py-2 d-inline-block fw-semibold custom-width">
-            <GlobalEnquiryForm
-              className="  rounded-0 pymainatin py-3  text-decoration-none  orangetext"
-              buttonText="   Looking to Set Up or Upgrade Your Coffee Processing Plant? "
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="container-fluid about py-5 d-md-block d-none">
-        <div className="container py-5">
-          <div className="row g-5">
-            <div
-              className="col-lg-5 wow fadeInRight mxheightset340"
-              data-wow-delay="0.2s"
-            >
-              <div className="position-relative h-100">
-                <div
-                  className="position-relative w-100"
-                  style={{ height: "400px" }}
+           <SwiperSlide className="swiperslid">
+  <div
+    className="position-relative w-100  responsive-banner"
+    
+  >
+    <Image
+      src={banner}
+      alt="banner"
+      fill
+      className="object-cover w-100 h-100"
+      priority
+    />
+    <div
+      className="position-absolute top-0 start-0 w-100 h-100"
+      style={{
+        background: 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))',
+      }}
+    ></div>
+  </div>
+</SwiperSlide>
+
+        </Swiper>
+      {/* <div
+                  className="position-absolute top-50 start-50 translate-middle text-white text-center"
+                  style={{
+                    maxWidth: '600px',
+                    padding: '20px',
+                    background: 'rgba(0,0,0,0.6)',
+                    borderRadius: '20px',
+                  }}
                 >
-                  <Image
-                    src={modi3}
-                    alt=""
-                    fill
-                    className="img-fluid w-100 h-100 aboutimg1"
-                    sizes="100vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-
-                <div className="bg-white">
-                  <div className="position-absolute pt-3 bg-white aboutmainleft ">
-                    <div className="backgoundoramge p-4">
-                      <h4 className="display-2 mb-0 fs700 text-white">25+</h4>
-                      <p className="text-white fs-5 mb-0">
-                        years of experience
-                      </p>
-                    </div>
-                  </div>
-                  <div className="position-absolute p-3 bg-white pb-0 pe-0 aboutmainright">
-                    <div
-                      className="position-relative w-100"
-                      style={{ height: "400px" }}
-                    >
-                      <Image
-                        src={cofee3.src}
-                        alt=""
-                        fill
-                        className="img-fluid w-100 h-60 aboutimg1"
-                        sizes="100vw"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
-              <div className="h-100">
-                <h2 className="fs41 mb-4 fw700black ">
-                  Highest quality coffee Plants
-                </h2>
-                <div className="row g-4 mb-4">
-                  <div className="col-md-6">
-                    <div className="d-flex text-decoration-none">
-                      <span className="bi bi-cup orangetext bilight43 bi-3x me-3"></span>
-                      <h4 className="mb-0 abouth4 pt-2">
-                        Commercial Espresso Solutions
-                      </h4>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="d-flex text-decoration-none">
-                      <span className="bi bi-gear  orangetext bilight43 me-3"></span>
-                      <h4 className="mb-0 abouth4 pt-2">
-                        {" "}
-                        Fully Automatic & Customizable Equipments 
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-                <p className="mb-4 fs18">
-                  With over 25 years of experience in engineering Leveraging
-                  advanced automation, hygienic design, and customizable
-                  features, we ensure each system delivers a premium coffee
-                  experience while aligning with your brand and operational
-                  goals.
-                </p>
-                <div className="text-dark mb-4">
-                  <p className="fs-5">
-                    <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                    Engineered for performance, longevity, and low maintenance
+                  <h2 className="fw-bold">Golden Coffee Roasters</h2>
+                  <p className="mb-0">
+                    Engineered for Excellence | Manufactured for Large-Scale Production
                   </p>
-                  <p className="fs-5">
-                    <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                    Smart automation for seamless, high-volume brewing
-                  </p>
-                  <p className="fs-5">
-                    <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                    Custom-built options tailored to your brand identity and
-                    space
-                  </p>
-                  <p className="fs-5">
-                    <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                    Manufactured to meet international safety and quality
-                    standards
-                  </p>
-                </div>
-               
-                <GlobalEnquiryForm
-                  className="btn  backgoundoramge rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 text-white"
-                  buttonText="Contact us"
-                />
-              </div>
-            </div>
+                </div> */}
+        {/* Custom Navigation */}
+        {/* <div
+          className="position-absolute bottom-0 end-0 d-flex align-items-center gap-3 p-3 z-3"
+          style={{ color: 'white' }}
+        >
+          <div className="custom-pagination" style={{ fontSize: '20px' }}></div>
+          <div className="d-flex gap-2">
+            <button className="custom-prev btn btn-outline-light rounded-circle border border-white">
+              <i className="fas fa-arrow-left"></i>
+            </button>
+            <button className="custom-next btn btn-outline-light rounded-circle border border-white">
+              <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
-        </div>
-      </div>
-      <div className="container py-md-5 py-0 d-md-none d-block">
-        <div className="row align-items-center">
-          <div className="col-lg-7 mt-3">
-            <h2 className="display-4 mb-4 fw700black ">
-              Highest quality coffee Plants
-            </h2>
-
-            <div className="d-flex gap-4 mb-3 flex-wrap">
-              <div className="d-flex align-items-center gap-2">
-                <span className="bi bi-cup  text-primary bilight43 bi-3x me-3"></span>
-                <h4 className="mb-0 abouth4 pt-2">
-                  Commercial Espresso Solutions
-                </h4>
-              </div>
-              <div className="d-flex align-items-center gap-2">
-                <span className="bi bi-gear   text-primary bilight43 me-3"></span>
-                <h4 className="mb-0 abouth4 pt-2">
-                  {" "}
-                  Fully Automatic & Customizable Equipments
-                </h4>
-              </div>
-            </div>
-
-            <p className="mb-4 fs18">
-              With over 25 years of experience in engineering Leveraging
-              advanced automation, hygienic design, and customizable features,
-              we ensure each system delivers a premium coffee experience while
-              aligning with your brand and operational goals.
-            </p>
-
-            <div className="text-dark mb-4">
-              <p className="fs-5">
-                <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                Engineered for performance, longevity, and low maintenance
-              </p>
-              <p className="fs-5">
-                <span className="bi bi-check-lg orangetext me-2"></span> Smart
-                automation for seamless, high-volume brewing
-              </p>
-              <p className="fs-5">
-                <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                Custom-built options tailored to your brand identity and space
-              </p>
-              <p className="fs-5">
-                <span className="bi bi-check-lg orangetext me-2"></span>{" "}
-                Manufactured to meet international safety and quality standards
-              </p>
-            </div>
-            <GlobalEnquiryForm
-              className="btn  backgoundoramge rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2  mb-4 text-white"
-              buttonText="Contact us"
-            />
-          </div>
-
-          <div className="col-lg-5 mt-5 mt-lg-0">
-            <div
-              className="position-relative w-100 mb-3"
-              style={{ height: "250px" }}
-            >
-              <Image
-                src={modi3}
-                alt="Construction site"
-                fill
-                sizes="(min-width: 1024px) 400px, 100vw"
-                style={{ objectFit: "cover" }}
-                className="rounded"
-              />
-            </div>
-
-            <div className="d-flex flex-column flex-sm-row gap-3">
-              <div
-                className="backgoundoramge text-white p-4 d-flex flex-column justify-content-center align-items-start"
-                style={{ minWidth: "160px" }}
-              >
-                <h4 className="display-2 mb-0 fs700 text-white">25+</h4>
-                <p className="text-white fs-5 mb-0">years of experience</p>
-              </div>
-
-              <div
-                className="position-relative w-100"
-                style={{ height: "200px" }}
-              >
-                <Image
-                  src={cofee3.src}
-                  alt="Engineer"
-                  fill
-                  sizes="(min-width: 1024px) 220px, 100vw"
-                  style={{ objectFit: "cover" }}
-                  className="rounded"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section className="container-fluid px-0  backgoundoramge  pt-5  pb-5 mt-md-0 mt-5">
-        <div className="row g-0  align-items-center  max90 ">
-          <div className="col-lg-8   p-md-5 p-3">
-            <h1 className="  text-white h2size animate__animated animate__fadeInLeft">
-              Engineered for Performance, <br />
-              Built for Scale <br />
-            </h1>
-            <h4 className="mt-4 text-white animate__animated animate__fadeInLeft">
-              From process design to automation — our commercial-grade coffee
-              machines power consistent, hygienic brewing at an industrial
-              level.
-            </h4>
-          </div>
-
-          <div className="col-lg-4 col-10  animate__animated animate__fadeInRight">
-            <Image
-              src={cofemanu1}
-              alt="Pilot Plant"
-              width={300}
-              height={300}
-              className="img-fluid w-100 h-100 object-fit-cover rounded"
-              priority
-            />
-          </div>
-        </div>
+        </div> */}
       </section>
 
-      <div className="position-relative max90 mt-5 d-md-block d-none">
-        <Image
-          src={cofeepalnt2}
-          alt="DEVEX Anlagenbau"
-          width={1920}
-          height={800}
-          className="img-fluid w-100 object-fit-cover"
-          priority
-        />
-      </div>
 
-      <div className="position-relative w-100 overflow-hidden d-md-none d-block mt-5">
-        <Image
-          src={cofeepalnt2}
-          alt="DEVEX Anlagenbau"
-          width={1920}
-          height={800}
-          className="img-fluid w-100 object-fit-cover"
-          priority
-        />
-      </div>
 
-      <section className="container my-5">
+
+          <section className="py-4 px-3 max90banner">
+      <h5 className="text-dark fw-semibold mb-3">
+        <span className="me-2" style={{ color: '#c49b00' }}>●</span>
+      Innovating Coffee Roasting with Quality Industries Excellence
+      </h5>
+
+
+<Swiper
+  modules={[Autoplay]}
+  autoplay={{
+    delay: 1000,
+    disableOnInteraction: false,
+  }}
+  loop={true}
+  spaceBetween={10}
+  slidesPerView={1} // Mobile default
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+  }}
+>
+        {features.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className='card py-3'>
+              <div className="d-flex align-items-start gap-3">
+                <img src={item.icon.src} alt={item.title} width={50} height={50} />
+                <div>
+                  <h6 className="fw-bold mb-1 goldenh6">{item.title}</h6>
+                  <p className="mb-0 text-muted small">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+
+
+
+
+        <section className='container my-5 aboutSection'>
+      <div className="row align-items-center">
+     
+
+
+          <div className="col-md-6 ortalama-ayari-768">
+                        <Image alt="Golden Coffee Roasters" className="mask-image lazy entered lazy-loaded" width="500" height="500" data-ll-status="loaded"   src={cofemanu2}/>
+                    </div>
+
+        {/* Right Content */}
+        <div className="col-lg-6">
+          <h2 className="fw-bold">
+            <span className='goldText'>Quality Industries </span>{' '}
+            – Pioneering Turnkey Coffee Process Engineering
+            {/* Integrates Cutting-Edge Tech and{' '} */}
+            {/* <span className='goldText'>Craftsmanship</span> with Mastery */}
+          </h2>
+          <p className="mt-3">
+           Welcome to Quality Industries, where innovation meets precision in coffee processing. As a trusted provider of turnkey plant solutions for the coffee industry, we specialize in delivering technologically advanced, energy-efficient, and hygienic processing systems that span the entire production cycle — from green bean handling to instant and soluble coffee manufacturing.
+          </p>
+          <p>
+         Our comprehensive expertise ensures that every step — from aroma-optimizing extraction, efficient evaporation, to spray-drying and freeze-drying — is engineered for maximum quality, consistency, and productivity.
+          </p>
+          <p>
+         Whether you're a small-batch specialty producer or a large-scale industrial manufacturer, we offer customized solutions, global support, and a deep commitment to your long-term success. At Quality Industries, we don’t just build coffee plants — we build performance, trust, and a sustainable future for coffee.
+          </p>
+          
+          
+      <button className="btn btn-dark px-4 py-2 rounded-pill mt-3 golden-hover">
+  <span>Contact Us</span>
+</button>
+
+
+        </div>
+      </div>
+    </section>
+
+ <section className="container my-5">
         <h2 className="text-center mb-4 pb-4 h2size  ">Testimonials</h2>
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, ]}
           autoplay={{ delay: 2000 }}
           breakpoints={{
             768: { slidesPerView: 2 },
@@ -569,152 +498,40 @@ export default function Home() {
         </Swiper>
       </section>
 
-      <div
-        className="container-fluid banner py-5 wow zoomIn  "
-        data-wow-delay="0.2s"
-      >
-     
-        <div className="container py-5">
-          <div className="row g-5">
-            <div className="col-lg-8">
-              <div className="">
-                <h4 className="text-white">Contact With Me</h4>
-                <h2 className=" text-white mb-0 fs700 h2size">
-                  Precision-Engineered Coffee Equipments Backed by Industrial
-                  Process Expertise
-                </h2>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="d-flex align-items-center justify-content-lg-end h-100">
-         
-                <GlobalEnquiryForm
-                  className="btn  backgoundoramge rounded-0 pymainatin py-3 px-5 px-md-5 ms-2 me-2 text-white"
-                  buttonText="Request a Custom Demo"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className="py-5 container aboutSection">
+      <div className=" text-center">
+        <h2 className="mb-2">Product Features</h2>
+        <p className="text-muted mb-4">Standard and Optional Features of Golden Products</p>
 
-      <div
-        className="modal fade"
-        id="enquiryModal"
-        aria-labelledby="enquiryModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <Formik
-              initialValues={{
-                name: "",
-                email: "",
-                contact_number: "",
-                course: "",
-                location: "",
-                message: "",
-              }}
-           
-              onSubmit={handleSubmit}
-            >
-              <div className="searchForm">
-                <h5 className="pb-3 fw-bold text-center text-blue">
-                  Let’s build a better future for you
-                </h5>
-                <Form>
-                  <div className="mb-3">
-                    <Field
-                      type="text"
-                      name="name"
-                      placeholder="Enter Name"
-                      className="form-control"
-                      required
+        <div className="row g-4">
+          {features2.map((feature, idx) => (
+            <div className="col-sm-6 col-md-4 col-lg-3" key={idx}>
+              <div className='flipCard rounded-5'>
+                <div className='flipCardInner rounded-1'>
+                  <div className='flipCardFront p-4 rounded-5'>
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={100}
+                      height={100}
+                      className="mb-3"
                     />
-                    <ErrorMessage
-                      name="name"
-                      component="div"
-                      className="error text-danger"
-                    />
+                    <p className="fw-semibold">{feature.title}</p>
                   </div>
-                  <div className="mb-3">
-                    <Field
-                      type="email"
-                      name="email"
-                      placeholder="Enter Email"
-                      className="form-control"
-                      required
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="error text-danger"
-                    />
+                  <div className='flipCardBack p-3 rounded-5'>
+                    <p className="text-white m-0">{feature.desc}</p>
                   </div>
-                  <div className="mb-3">
-                    <Field
-                      type="text"
-                      name="contact_number"
-                      placeholder="Enter Contact Number"
-                      className="form-control"
-                      required
-                    />
-                    <ErrorMessage
-                      name="contact_number"
-                      component="div"
-                      className="error text-danger"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <Field
-                      type="text"
-                      name="course"
-                      placeholder="Enter Course"
-                      className="form-control"
-                    />
-                    <ErrorMessage
-                      name="course"
-                      component="div"
-                      className="error text-danger"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <Field
-                      type="text"
-                      name="location"
-                      placeholder="Enter Location"
-                      className="form-control"
-                    />
-                    <ErrorMessage
-                      name="location"
-                      component="div"
-                      className="error text-danger"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <Field
-                      as="textarea"
-                      name="message"
-                      placeholder="Enter Message"
-                      className="form-control"
-                    />
-                    <ErrorMessage
-                      name="message"
-                      component="div"
-                      className="error text-danger"
-                    />
-                  </div>
-                  <div className="d-grid">
-                    <button type="submit" className="btn btn-success">
-                      Submit
-                    </button>
-                  </div>
-                </Form>
+                </div>
               </div>
-            </Formik>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
+
+
+     
+
+  </>
   );
 }
