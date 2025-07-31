@@ -267,18 +267,23 @@ export default function Home() {
 
       
 
-        <Swiper
-          modules={[Navigation, Pagination, EffectCreative]}
-          navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
-          pagination={{ el: ".custom-pagination", type: "fraction" }}
-          effect="creative"
-          creativeEffect={{
-            prev: { shadow: true, translate: [0, 0, -400] },
-            next: { translate: ["100%", 0, 0] },
-          }}
-          loop
-          className="mySwiper  d-md-block d-none height700"
-        >
+       
+<Swiper
+  modules={[Navigation, Pagination, EffectCreative, Autoplay]} // Include Autoplay
+  navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+  pagination={{ el: ".custom-pagination", type: "fraction" }}
+  effect="creative"
+  creativeEffect={{
+    prev: { shadow: true, translate: [0, 0, -400] },
+    next: { translate: ["100%", 0, 0] },
+  }}
+  autoplay={{
+    delay: 1000,      // Change slide every 4 seconds
+    disableOnInteraction: false, // Keep autoplay after user interacts
+  }}
+  loop
+  className="mySwiper d-md-block d-none height700"
+>
           {[bannr1, bannr3, bannr4].map((image, index) => (
             <SwiperSlide className="swiperslid" key={index}>
               <div className="position-relative w-100 responsive-banner">
@@ -303,7 +308,7 @@ export default function Home() {
    
        
 
-        <div
+        {/* <div
           className="position-absolute bottom-0 end-0 d-flex align-items-center gap-3 p-3 z-3 d-md-block d-none"
           style={{ color: "white" }}
         >
@@ -316,11 +321,11 @@ export default function Home() {
               <i className="fas fa-arrow-right"></i>
             </button>
           </div>
-        </div>
+        </div> */}
 
         
 <div className="d-md-none d-block">
- <Swiper
+ {/* <Swiper
           modules={[Navigation, Pagination, EffectCreative]}
           navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
           pagination={{ el: ".custom-pagination", type: "fraction" }}
@@ -331,7 +336,25 @@ export default function Home() {
           }}
           loop
           className="mySwiper rounded d-md-none d-block  heightback"
-        >
+        > */}
+
+          
+<Swiper
+  modules={[Navigation, Pagination, EffectCreative, Autoplay]} // Include Autoplay
+  navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+  pagination={{ el: ".custom-pagination", type: "fraction" }}
+  effect="creative"
+  creativeEffect={{
+    prev: { shadow: true, translate: [0, 0, -400] },
+    next: { translate: ["100%", 0, 0] },
+  }}
+  autoplay={{
+    delay: 1000,      // Change slide every 4 seconds
+    disableOnInteraction: false, // Keep autoplay after user interacts
+  }}
+  loop
+className="mySwiper rounded d-md-none d-block  heightback"
+>
           {[bannr1, bannr3, bannr4].map((image, index) => (
             <SwiperSlide className="swiperslid" key={index}>
               <div className="position-relative w-100 responsive-banner height700">
@@ -354,7 +377,7 @@ export default function Home() {
           ))}
         </Swiper>
 
-          <div
+          {/* <div
           className="position-absolute bottom-0 end-0 d-flex align-items-center gap-3 p-3 z-3"
           style={{ color: "white" }}
         >
@@ -367,7 +390,7 @@ export default function Home() {
               <i className="fas fa-arrow-right"></i>
             </button>
           </div>
-        </div>
+        </div> */}
 
         </div>
       </section>
