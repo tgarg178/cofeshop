@@ -278,7 +278,7 @@ export default function Home() {
     next: { translate: ["100%", 0, 0] },
   }}
   autoplay={{
-    delay: 1000,      // Change slide every 4 seconds
+    delay: 2000,      // Change slide every 4 seconds
     disableOnInteraction: false, // Keep autoplay after user interacts
   }}
   loop
@@ -349,7 +349,7 @@ export default function Home() {
     next: { translate: ["100%", 0, 0] },
   }}
   autoplay={{
-    delay: 1000,      // Change slide every 4 seconds
+    delay: 2000,      // Change slide every 4 seconds
     disableOnInteraction: false, // Keep autoplay after user interacts
   }}
   loop
