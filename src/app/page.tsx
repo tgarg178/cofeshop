@@ -296,10 +296,10 @@ export default function Home() {
                 />
                 <div
                   className="position-absolute top-0 start-0 w-100 h-100"
-                  style={{
-                    background:
-                      "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))",
-                  }}
+                  // style={{
+                  //   background:
+                  //     "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))",
+                  // }}
                 ></div>
               </div>
             </SwiperSlide>
@@ -367,10 +367,10 @@ className="mySwiper rounded d-md-none d-block  heightback"
                 />
                 <div
                   className="position-absolute top-0 start-0 w-100 heightback"
-                  style={{
-                    background:
-                      "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))",
-                  }}
+                  // style={{
+                  //   background:
+                  //     "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))",
+                  // }}
                 ></div>
               </div>
             </SwiperSlide>
