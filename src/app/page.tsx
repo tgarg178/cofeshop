@@ -22,6 +22,10 @@ import bannr4 from "../assets/b3new.jpg";
 import bannr3 from "../assets/b7new.jpg";
 
 
+import bannr2 from "../assets/b10.jpg";
+
+
+
 
 
 import cofemanu2 from "../assets/cofemanu2.webp";
@@ -286,7 +290,7 @@ export default function Home() {
   loop
   className="mySwiper d-md-block d-none height700"
 >
-          {[bannr1, bannr3, bannr4].map((image, index) => (
+          {[bannr1,bannr2, bannr3, bannr4].map((image, index) => (
             <SwiperSlide className="swiperslid" key={index}>
               <div className="position-relative w-100 responsive-banner">
                 <Image
@@ -357,7 +361,7 @@ export default function Home() {
   loop
 className="mySwiper rounded d-md-none d-block  heightback"
 >
-          {[bannr1, bannr3, bannr4].map((image, index) => (
+          {[bannr1,bannr2, bannr3, bannr4].map((image, index) => (
             <SwiperSlide className="swiperslid" key={index}>
               <div className="position-relative w-100 responsive-banner height700">
                 <Image
