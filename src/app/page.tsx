@@ -16,10 +16,12 @@ import Image from "next/image";
 import logo from "../assets/logomain.png";
 import logo2 from "../assets/logonew.png";
 
-import bannr1 from "../assets/b4new.jpg";
-import bannr4 from "../assets/b5new.jpg";
+import bannr1 from "../assets/b6new.jpg";
+import bannr4 from "../assets/b3new.jpg";
 
-import bannr3 from "../assets/b3new.jpg";
+import bannr3 from "../assets/b7new.jpg";
+
+
 
 
 import cofemanu2 from "../assets/cofemanu2.webp";
